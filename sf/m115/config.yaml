@@ -1,6 +1,6 @@
 Comments: 'subsub single order mix emcee'
 PCA:
-  path: $subsub/sf/m115/PHOENIX_IGRINS_H_PCA.hdf5
+  path: $subsub/sf/m115/subsub_m115_PCA.hdf5
   priors:
   - [2.0, 0.0075]
   - [2.0, 0.75]
@@ -12,8 +12,8 @@ Theta:
   Av: 0.0
   grid: [4100.0, 3.8, 0.0]
   logOmega: -0.26
-  vsini: 30.0
-  vz: 0.0
+  vsini: 7.0
+  vz: 45.0
 Theta_jump:
   Av: 0.01
   grid: [3, 0.003, 0.001]
@@ -23,7 +23,7 @@ Theta_jump:
 cheb_degree: 4
 cheb_jump: 0.0001
 data:
-  files: [$subsub/data/reduced/__xTBDx__IGRINS_m115.hdf5]
+  files: [$subsub/data/reduced/subsub_m115.hdf5]
   grid_name: PHOENIX
   instruments: [IGRINS_H]
   orders: [0]
@@ -33,11 +33,11 @@ grid:
   key_name: t{0:.0f}g{1:.1f}z{2:.1f}
   parname: [temp, logg, Z]
   parrange:
-  - [3000, 4300]
-  - [3.5, 4.0]
+  - [3000, 5300]
+  - [3.0, 4.0]
   - [-0.5, 0.5]
   raw_path: $Starfish/libraries/raw/PHOENIX/
-  wl_range: [15543, 15699]
+  wl_range: [15550, 15700]
 name: subsub_m115
 outdir: output/
 plotdir: plots/
