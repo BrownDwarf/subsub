@@ -1,4 +1,4 @@
-Comments: 'subsub single order mix emcee'
+Comments: 'subsub single order mix emcee boutique'
 PCA:
   path: $subsub/sf/m115/subsub_m115_PCA.hdf5
   priors:
@@ -12,14 +12,19 @@ Theta:
   Av: 0.0
   grid: [4100.0, 3.8, 0.0]
   logOmega: -0.26
+  teff2: 3300.0
+  logOmega2: -0.6
   vsini: 7.0
   vz: 45.0
 Theta_jump:
   Av: 0.01
   grid: [3, 0.003, 0.001]
+  teff2: 10.0
+  logOmega2: 0.0003
   logOmega: 0.0003
   vsini: 0.05
   vz: 0.05
+Theta_priors: $subsub/sf/m115/user_prior.py
 cheb_degree: 4
 cheb_jump: 0.0001
 data:
