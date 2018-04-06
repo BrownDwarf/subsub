@@ -1,6 +1,6 @@
 Comments: 'subsub single order mix emcee boutique'
 PCA:
-  path: $subsub/sf/m115/subsub_m115_PCA.hdf5
+  path: $subsub/sf/m115/PHOENIX_IGRINS_H_PCA_Teff3000-5300.hdf5
   priors:
   - [2.0, 0.0075]
   - [2.0, 0.75]
@@ -28,7 +28,7 @@ Theta_priors: $subsub/sf/m115/user_prior.py
 cheb_degree: 4
 cheb_jump: 0.0001
 data:
-  files: [$subsub/data/reduced/subsub_m115.hdf5]
+  files: [$subsub/data/reduced/subsub_IGRINS_m115.hdf5]
   grid_name: PHOENIX
   instruments: [IGRINS_H]
   orders: [0]
@@ -42,8 +42,8 @@ grid:
   - [3.0, 4.0]
   - [-0.5, 0.5]
   raw_path: $Starfish/libraries/raw/PHOENIX/
-  wl_range: [15550, 15700]
-name: subsub_m115
+  wl_range: [15540, 15705]
+name: mix_emcee
 outdir: output/
 plotdir: plots/
 region_params: {logAmp: -2.0, sigma: 7.0}
