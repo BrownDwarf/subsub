@@ -206,6 +206,41 @@ def lnprob_all(p):
 
 draws = []
 
+
+#Colorbrewer bands
+s3 = '#fee6ce'
+s2 = '#fdae6b'
+s1 = '#e6550d'
+
+wl = model.wl
+data = model.fl
+
+import pandas as pd
+import json
+
+if args.config:
+    df_out = pd.DataFrame({'wl':wl, 'data':data})
+
+    with open('s0_o0phi.json') as f:
+        s0phi = json.load(f)
+
+    psl = (Starfish.config['Theta']['grid']+
+      [Starfish.config['Theta'][key] for key in ['vz', 'vsini', 'logOmega', 'teff2', 'logOmega2']] +
+      s0phi['cheb'] +
+      [s0phi['sigAmp']] + [s0phi['logAmp']] + [s0phi['l']])
+
+    ps = np.array(psl)
+    df_out['model_composite'] = lnprob_all(ps)
+
+    pset1 = ps.copy()
+    pset1[5] = -20
+    df_out['model_cool50'] = lnprob_all(pset1)
+    pset2 = ps.copy()
+    pset2[7] = -20
+    df_out['model_hot50'] = lnprob_all(pset2)
+
+    df_out.to_csv('spec_config.csv', index=False)
+
 try:
     ws = np.load("emcee_chain.npy")
     burned = ws[:, -200:,:]
@@ -219,17 +254,6 @@ fc = burned.reshape(xs*ys, zs)
 
 nx, ny = fc.shape
 
-
-#Colorbrewer bands
-s3 = '#fee6ce'
-s2 = '#fdae6b'
-s1 = '#e6550d'
-
-wl = model.wl
-data = model.fl
-
-import pandas as pd
-import json
 
 if args.OG:
 
@@ -292,29 +316,6 @@ if args.OG:
 
     df_out.to_csv('models_ff-05_50_95.csv', index=False)
 
-
-if args.config:
-    df_out = pd.DataFrame({'wl':wl, 'data':data})
-
-    with open('s0_o0phi.json') as f:
-        s0phi = json.load(f)
-
-    psl = (Starfish.config['Theta']['grid']+
-      [Starfish.config['Theta'][key] for key in ['vz', 'vsini', 'logOmega', 'teff2', 'logOmega2']] +
-      s0phi['cheb'] +
-      [s0phi['sigAmp']] + [s0phi['logAmp']] + [s0phi['l']])
-
-    ps = np.array(psl)
-    df_out['model_composite'] = lnprob_all(ps)
-
-    pset1 = ps.copy()
-    pset1[5] = -20
-    df_out['model_cool50'] = lnprob_all(pset1)
-    pset2 = ps.copy()
-    pset2[7] = -20
-    df_out['model_hot50'] = lnprob_all(pset2)
-
-    df_out.to_csv('spec_config.csv', index=False)
 
 if args.static:
 
