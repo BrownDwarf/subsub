@@ -240,6 +240,8 @@ if args.config:
     df_out['model_hot50'] = lnprob_all(pset2)
 
     df_out.to_csv('spec_config.csv', index=False)
+    import sys
+    sys.exit()
 
 try:
     ws = np.load("emcee_chain.npy")
