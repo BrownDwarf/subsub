@@ -4,8 +4,8 @@ An experimental sub-sub-giant project
 ## Authors
 
 + Emily Leiner (U Wisconsin Madison)
-+ Michael Gully-Santiago (Kavli Institute for Astronomy and Astrophysics)
-+ Natalie Gosnell (U Texas at Austin)
++ Michael Gully-Santiago (NASA Ames)
++ Natalie Gosnell (Colorado College)
 + Others...
 
 ## Dependencies:
