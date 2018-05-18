@@ -338,8 +338,44 @@ if args.static:
     # Sort the flatchain by fill factor:
     fc_sorted = fc
     ind_med = 60 #Random
+    ind_lo = 6 #0.05*8000
+    ind_hi = 114 #0.95*8000
 
     df_out = pd.DataFrame({'wl':wl, 'data':data})
+
+    # Low end:
+    ps_lo = fc_sorted[ind_lo]
+    print(ps_lo)
+    df_out['model_comp05'] = lnprob_all(ps_lo)
+
+    pset1 = ps_lo.copy()
+    pset1[5] = -20
+    df_out['model_cool05'] = lnprob_all(pset1)
+    pset2 = ps_lo.copy()
+    pset2[7] = -20
+    df_out['model_hot05'] = lnprob_all(pset2)
+
+    # Middle:
+    ps_med = fc_sorted[ind_med]
+    df_out['model_comp50'] = lnprob_all(ps_med)
+
+    pset1 = ps_med.copy()
+    pset1[5] = -20
+    df_out['model_cool50'] = lnprob_all(pset1)
+    pset2 = ps_med.copy()
+    pset2[7] = -20
+    df_out['model_hot50'] = lnprob_all(pset2)
+
+    # Hi end:
+    ps_hi = fc_sorted[ind_hi]
+    df_out['model_comp95'] = lnprob_all(ps_hi)
+
+    pset1 = ps_hi.copy()
+    pset1[5] = -20
+    df_out['model_cool95'] = lnprob_all(pset1)
+    pset2 = ps_hi.copy()
+    pset2[7] = -20
+    df_out['model_hot95'] = lnprob_all(pset2)
 
     # Middle:
     ps_med = fc_sorted[ind_med]
