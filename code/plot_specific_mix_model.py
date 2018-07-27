@@ -264,11 +264,11 @@ if args.OG:
 
     # Get the line list of strong lines in Arcturus
 
-    all_ll = pd.read_csv('/Users/obsidian/GitHub/ApJdataFrames/data/Rayner2009/tbl7_clean.csv')
-    all_ll['wl_A'] = all_ll.wl*10000.0
+    #all_ll = pd.read_csv('/Users/obsidian/GitHub/ApJdataFrames/data/Rayner2009/tbl7_clean.csv')
+    #all_ll['wl_A'] = all_ll.wl*10000.0
 
-    ll = all_ll[ (all_ll.wl_A > np.min(wl)) & (all_ll.wl_A < np.max(wl)) ]
-    ll = ll.reset_index()
+    #ll = all_ll[ (all_ll.wl_A > np.min(wl)) & (all_ll.wl_A < np.max(wl)) ]
+    #ll = ll.reset_index()
 
 
     # Sort the flatchain by fill factor:
