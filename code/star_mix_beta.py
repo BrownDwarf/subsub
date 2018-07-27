@@ -185,7 +185,7 @@ if args.resume:
 else:
     p0_ball = emcee.utils.sample_ball(p0, p0_std, size=nwalkers)
 
-n_threads = multiprocessing.cpu_count()
+n_threads = 2 #multiprocessing.cpu_count()
 sampler = emcee.EnsembleSampler(nwalkers, ndim, lnprob, threads=n_threads)
 
 nsteps = args.samples
