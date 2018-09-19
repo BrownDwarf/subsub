@@ -1,0 +1,51 @@
+# Outline
+
+- **Introduction**
+	- [ ] What is a sub-subgiant?
+	- [ ] What causes sub sub giant stars (Leiner et al. 2017)
+	- [ ] M67 S1062
+		- [ ] Prototypical subsub (Geller et al. 2017)
+		- [ ] Binary orbit, SB1
+	- [ ] Starspots as confounding factors
+		- [ ] Inhibit convective efficiency (redder and bigger)
+		- [ ] Also confound observations: assign incorrect Teff
+		- [ ] This paper aims to measure the starspot coverage and temp
+	- [ ] Layout of this paper
+- **Observations and data reduction**
+	- [ ] IGRINS observations
+	- [ ] Ground-based photometric monitoring- ASASSN, AAVSO, ASAS
+	- [ ] K2 data (Campaign 5), *stretch goal* C16
+	- [ ] *stretch goal* APOGEE?
+	- [ ] Gaia data (membership confirmed)
+- **Analysis**
+	- [ ] Summary and assumptions of our methods
+	- [ ] K2 Superstamp(s)
+		- [ ] K2 detrending
+		- [ ] Interpreting lightcurves
+		- [ ] Period and amplitude of lightcurve
+			- [ ] Multi-term Lomb-Scargle + Fourier reconstruction
+	- [ ] Phase folded archival V-band photometry (ASASSN+)
+	- [ ] IGRINS two-temperature spectral inference w/ Starfish
+		- [ ] MCMC convergence and posterior predictive checks
+		- [ ] `figure:` IGRINS Spectra
+		- [ ] Internal consistency of vsini, v_z
+		- [ ] `figure:` Violin plot
+	- [ ] Analysis of near-IR flux contribution from binary companion
+		- [ ] Limits on companion types
+- **Results**
+	- [ ] We detect spots in spectra
+		- [ ] S1062 has ~X% coverage fraction of spots with T_spot ~ Y based on IGRINS + Starfish
+		- [ ] *bonus* Revised effective temperature using both temperature components [f_spot * T_spot^4 + (1 -f_spot) * T_ambient^4] = Teff^4
+		- [ ] *bonus* Rsini
+	- [ ] IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
+	- [ ] `figure:` T_spot versus f_spot plot
+	- [ ] What coverage fraction would we have measured across the rotational phase?
+- **Discussion**
+	- [ ] Spot coverage is consistent with formation theories
+	- [ ] Conceivable geometries with circumpolar active longitudes, or migrating active latitudes
+	- [ ] Biases introduced if we assume a spot-free model
+		- [ ] Where does subsub sit in a new HR diagram? (new Somers models)
+		- [ ] *bonus* `figure:` PMS HR diagram with new Somers tracks
+		- [ ] Spot impact on SED fits
+- **Appendix**
+	- [ ] TBD
