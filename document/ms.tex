@@ -1,0 +1,115 @@
+%\documentclass[iop,revtex4]{emulateapj}% change onecolumn to iop for fancy, iop to twocolumn for manuscript
+\documentclass[twocolumn]{emulateapj}% change onecolumn to iop for fancy, iop to onecolumn for manuscript
+%\documentclass[12pt,preprint]{aastex}
+
+%\usepackage{lineno}
+%\usepackage{blindtext}
+%\linenumbers
+%\usepackage{breqn}
+\usepackage{amsmath}
+
+\let\pwiflocal=\iffalse \let\pwifjournal=\iffalse
+%From: http://arxiv.org/format/1512.00483
+%\input{setup}
+\input{mgs_setup}
+
+
+\newcommand{\iancze}{{\sc C15}}
+
+\providecommand{\eprint}[1]{\href{http://arxiv.org/abs/#1}{#1}}
+\providecommand{\adsurl}[1]{\href{#1}{ADS}}
+\newcommand{\name}{LkCa 4 }
+\newcommand{\project}[1]{\textsl{#1}}
+%\def\vsini{$v\sin{i_*}$}
+
+
+\slugcomment{In preparation}
+
+\shorttitle{Spots on Sub-sub-giants}
+
+\shortauthors{TBD}
+
+\bibliographystyle{yahapj}
+
+\begin{document}
+
+\title{Starspots on sub sub giants }
+
+\author{TBD,\altaffilmark{1}, author list TBD}
+
+
+\altaffiltext{1}{TBD}
+
+\begin{abstract}
+
+We measure the starspots on a sub sub giant.
+
+\end{abstract}
+
+\keywords{stars: fundamental parameters ---  stars: statistics}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+We do not know what causes some sub-sub giants!
+
+%Fill in more thereoy here
+\citet{somers15} emphasized the roll of starspots in inferring stellar ages.
+
+
+\section{Conclusions}
+
+Reiteration here.
+
+\clearpage
+\pagebreak
+
+
+\appendix
+
+\section{Are starspots confusing?}
+\label{methods-details}
+
+Short answer: no!
+
+\acknowledgements
+
+%ADS
+We thank ADS!
+
+%Kepler
+This paper includes data collected by the Kepler mission. Funding for the Kepler mission is provided by the NASA Science Mission directorate.
+
+% MAST
+Some/all of the data presented in this paper were obtained from the Mikulski Archive for Space Telescopes (MAST). STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.
+
+
+{\it Facilities:} \facility{Smith (IGRINS)}, \facility{AAVSO}, \facility{INTEGRAL (OMC)}, \facility{ASAS}, \facility{Gaia}
+
+{\it Software: }
+ \project{pandas} \citep{mckinney10},
+ \project{emcee} \citep{foreman13},
+ \project{matplotlib} \citep{hunter07},
+ \project{numpy} \citep{vanderwalt11},
+ \project{scipy} \citep{jones01},
+ \project{ipython} \citep{perez07},
+ \project{gatspy} \citep{JakeVanderplas2015},
+ \project{starfish} \citep{czekala15},
+ \project{seaborn} \citep{waskom14}
+%\software{%
+% \project{pandas} \citep{mckinney10}
+%    \project{emcee} \citep{foreman13},
+% \project{matplotlib} \citep{hunter07},
+% \project{numpy} \citep{vanderwalt11},
+% \project{scipy} \citep{jones01},
+% \project{ipython} \citep{perez07},
+% \project{gatspy} \citep{JakeVanderplas2015},
+% \project{starfish} \citep{czekala15}}.
+
+\clearpage
+
+\bibliographystyle{apj}
+\bibliography{ms}
+
+\end{document}

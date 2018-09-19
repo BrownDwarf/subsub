@@ -1,1 +1,4 @@
 .ipynb_checkpoints/
+*grid.out
+*.npy
+*.fits
