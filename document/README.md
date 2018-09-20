@@ -3,7 +3,7 @@
 - **Introduction**
 	- [ ] What is a sub-subgiant?
 	- [ ] What causes sub sub giant stars (Leiner et al. 2017)
-	- [ ] M67 S1062
+	- [ ] M67 S1063
 		- [ ] Prototypical subsub (Geller et al. 2017)
 		- [ ] Binary orbit, SB1
 	- [ ] Starspots as confounding factors
@@ -34,7 +34,7 @@
 		- [ ] Limits on companion types
 - **Results**
 	- [ ] We detect spots in spectra
-		- [ ] S1062 has ~X% coverage fraction of spots with T_spot ~ Y based on IGRINS + Starfish
+		- [ ] S1063 has ~X% coverage fraction of spots with T_spot ~ Y based on IGRINS + Starfish
 		- [ ] *bonus* Revised effective temperature using both temperature components [f_spot * T_spot^4 + (1 -f_spot) * T_ambient^4] = Teff^4
 		- [ ] *bonus* Rsini
 	- [ ] IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
