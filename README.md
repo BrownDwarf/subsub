@@ -1,9 +1,9 @@
 # subsub :ship: :ship:
-An experimental sub-sub-giant project 
+An experimental sub-sub-giant project
 
 ## Authors
 
-+ Emily Leiner (U Wisconsin Madison)
++ Emily Leiner (CIERA/Northwestern)
 + Michael Gully-Santiago (NASA Ames)
 + Natalie Gosnell (Colorado College)
 + Others...
@@ -23,4 +23,4 @@ To run Starfish you will need Starfish and all of its dependencies.
 
 License
 
-Copyright 2016 the Authors.  All rights reserved.
+Copyright 2018 the Authors.  All rights reserved.

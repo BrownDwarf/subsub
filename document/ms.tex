@@ -25,7 +25,7 @@
 
 \slugcomment{In preparation}
 
-\shorttitle{Spots on Sub-sub-giants}
+\shorttitle{Spots on Sub-subgiants}
 
 \shortauthors{TBD}
 
@@ -53,10 +53,86 @@ We measure the starspots on a sub sub giant.
 \section{Introduction}\label{sec:intro}
 
 We do not know what causes some sub-sub giants!
+But now we know a little... more. Hence this paper!
 
-%Fill in more thereoy here
+%Fill in more theory here
 \citet{somers15} emphasized the roll of starspots in inferring stellar ages.
 
+\begin{itemize}
+\item What is a sub-subgiant?
+  \begin{itemize}
+  \item What causes sub sub giant stars (Leiner et al. 2017)
+  \end{itemize}
+\item M67 S1063
+\begin{itemize}
+  \item Prototypical subsub (Geller et al. 2017)
+  \item Binary orbit, SB1
+\end{itemize}
+\item Starspots as confounding factors
+\begin{itemize}
+  \item Inhibit convective efficiency (redder and bigger)
+  \item Also confound observations: assign incorrect Teff
+  \item This paper aims to measure the starspot coverage and temp
+\end{itemize}
+\item Layout of this paper
+\end{itemize}
+
+\section{Observation and data reduction}
+\begin{itemize}
+\item IGRINS observations
+\item Ground-based photometric monitoring- ASASSN, AAVSO, ASAS
+\item K2 data (Campaign 5), *stretch goal* C16
+\item *stretch goal* APOGEE?
+\item Gaia data (membership confirmed)
+\end{itemize}
+
+\section{Analysis}
+\begin{itemize}
+\item Summary and assumptions of our methods
+\item K2 Superstamp(s)
+\begin{itemize}
+  \item K2 detrending
+  \item Interpreting lightcurves
+  \item Period and amplitude of lightcurve, with multi-term Lomb-Scargle + Fourier reconstruction
+\end{itemize}
+\item Phase folded archival V-band photometry (ASASSN+)
+\item IGRINS two-temperature spectral inference w/ Starfish
+\begin{itemize}
+  \item MCMC convergence and posterior predictive checks
+  \item FIGURE: IGRINS Spectra
+  \item Internal consistency of vsini, $v_z$
+  \item FIGURE: Violin plot
+\end{itemize}
+\item Analysis of near-IR flux contribution from binary companion
+\begin{itemize}
+  \item Limits on companion types
+\end{itemize}
+\end{itemize}
+
+\section{Results}
+\begin{itemize}
+\item We detect spots in spectra
+\begin{itemize}
+  \item S1063 has ~X\% coverage fraction of spots with Tspot ~ Y based on IGRINS + Starfish
+  \item *bonus* Revised effective temperature using both temperature components $[f_{\textrm{spot}} * T_{\textrm{spot}}^4 + (1 -f_{\textrm{spot}}) * T_{\textrm{ambient}}^4] = T_{\textrm{eff}}^4$
+  \item *bonus* Rsini
+\end{itemize}
+\item IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
+\item FIGURE: $T_{spot}$ versus $f_{spot}$ plot
+\item What coverage fraction would we have measured across the rotational phase?
+\end{itemize}
+
+\section{Discussion}
+\begin{itemize}
+\item Spot coverage is consistent with formation theories
+\item Conceivable geometries with circumpolar active longitudes, or migrating active latitudes
+\item Biases introduced if we assume a spot-free model
+\begin{itemize}
+  \item Where does subsub sit in a new HR diagram? (new Somers models)
+  \item *bonus* FIGURE: PMS HR diagram with new Somers tracks
+  \item Spot impact on SED fits
+\end{itemize}
+\end{itemize}
 
 \section{Conclusions}
 
