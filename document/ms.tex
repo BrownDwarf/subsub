@@ -2,6 +2,8 @@
 \documentclass[twocolumn]{emulateapj}% change onecolumn to iop for fancy, iop to onecolumn for manuscript
 %\documentclass[12pt,preprint]{aastex}
 
+\usepackage{graphicx}
+\usepackage{subfigure}
 %\usepackage{lineno}
 %\usepackage{blindtext}
 %\linenumbers
@@ -119,6 +121,24 @@ But now we know a little... more. Hence this paper!
 \end{itemize}
 \item IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
 \item FIGURE: $T_{spot}$ versus $f_{spot}$ plot
+
+
+\begin{figure*}[h]
+  \centering
+  \begin{tabular}{ccc}
+    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m119.pdf}} &
+    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m118.pdf}} &
+    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m116.pdf}} \\
+    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m114.pdf}} &
+    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m113.pdf}} &
+    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m110.pdf}} \\
+    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m109.pdf}} &
+    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m107.pdf}} &
+    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m106.pdf}}
+  \end{tabular}
+\caption{Tspot vs filling factor}
+\end{figure*}
+
 \item What coverage fraction would we have measured across the rotational phase?
 \end{itemize}
 

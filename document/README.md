@@ -38,7 +38,7 @@
 		- [ ] *bonus* Revised effective temperature using both temperature components [f_spot * T_spot^4 + (1 -f_spot) * T_ambient^4] = Teff^4
 		- [ ] *bonus* Rsini
 	- [ ] IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
-	- [ ] `figure:` T_spot versus f_spot plot
+	- [x] `figure:` T_spot versus f_spot plot
 	- [ ] What coverage fraction would we have measured across the rotational phase?
 - **Discussion**
 	- [ ] Spot coverage is consistent with formation theories
