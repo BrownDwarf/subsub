@@ -98,13 +98,28 @@ But now we know a little... more. Hence this paper!
   \item Period and amplitude of lightcurve, with multi-term Lomb-Scargle + Fourier reconstruction
 \end{itemize}
 \item Phase folded archival V-band photometry (ASASSN+)
-\item IGRINS two-temperature spectral inference w/ Starfish
-\begin{itemize}
-  \item MCMC convergence and posterior predictive checks
-  \item FIGURE: IGRINS Spectra
-  \item Internal consistency of vsini, $v_z$
-  \item FIGURE: Violin plot
-\end{itemize}
+\subsection{IGRINS two-temperature spectral inference w/ Starfish}
+
+We performed two-temperature probabilistic spectral decomposition on the IGRINS $H-$band spectrum.  We applied the spectral inference framework \texttt{Starfish} \citep{czekala15}, recently extended to support composite spectra comprised of mixtures of two distinct photospheric components \citep{2017ApJ...836..200G}.  Here, the two temperature components are labeled as $T_{\mathrm{spot}}$ and $T_{\mathrm{amb}}$ for the starspot and ambient photospheric emission respectively, with a filling factor $f$ defined as the ratio of collective projected surface area of the spot groups to the projected area of the star.
+
+We employed the \texttt{PHOENIX} precomputed synthetic model grid with grid ranges of $3000 < T_{\mathrm{eff}} \; (K) < 5300 $, $3 < \log{g \;(cm/s)}  < 4 $, and $ -0.5 <  [\mathrm{Fe}/\mathrm{H}] <0.5$.  We trained the spectral emulator \citep{czekala15} on this grid range, while preserving the absolute model mean fluxes to enable accurate flux comparison between two photospheres of disparate characteristic temperatures.  This new approach offers improved accuracy over the scalar flux interpolated approach introduced in Appendix XX of \citet{2017ApJ...836..200G}, especially for such a large dynamic range in effective temperature.  The spectral emulator approach propagates the uncertainty attributable to the coarsely sampled \texttt{PHOENIX} models.
+
+The pre-defined grid ranges place uniform priors over their domain.  Additionally, a threshold of 4500 K separated the allowed domains for the spot and ambient temperatures, yielding uniform priors $3000 < T_{\mathrm{spot}} \; (K) < 4500 $ and $4500 < T_{\mathrm{amb}} \; (K) < 5300$.
+
+\subsubsection{MCMC convergence and posterior predictive checks}
+Each IGRINS spectral order was fit independently, yielding over 20 individual sets of MCMC posteriors.  We employed \texttt{emcee} \citep{foreman13} with 5000 samples and 40 walkers, spot-checking the MCMC chains for signatures of steady-state posterior probability distributions suggestive of convergence.  Some orders did not pass our convergence criteria, usually due to poor initialization of nuissance parameters or overfitting.  These specrtral orders were removed from future analysis, yielding a total of nine spectral orders, shown in Figure \ref{fig:IGRINS_spectra3x3}.
+
+\subsubsection{FIGURE: IGRINS Spectra}
+\begin{figure*}
+ \centering
+ \includegraphics[width=0.98\textwidth]{figures/H_band_spectra_3x3.pdf}
+ \caption{Nine $H-$band IGRINS spectral orders with probabilistic spectral decomposition.}
+ \label{fig:IGRINS_spectra3x3}
+\end{figure*}
+
+\subsubsection{Internal consistency of vsini, $v_z$}
+We additionally spot-checked the MCMC posteriors with posterior predictive checks... XX
+
 \item Analysis of near-IR flux contribution from binary companion
 \begin{itemize}
   \item Limits on companion types
@@ -112,32 +127,47 @@ But now we know a little... more. Hence this paper!
 \end{itemize}
 
 \section{Results}
+
+Using the \texttt{Starfish} spectral inference results we investigate the relationship between spot temperature and filling factor. In Figure XX we show 2-dimensional distributions of filling factor and spot temperature of the last 200 samples for the nine orders with accepted fits. Across the nine orders, the median filling factor value is 32\% with a standard deviation of 7\%, with a corresponding spot temperature of $4000 \pm 200$ K. The ambient photosphere temperature ssociated with this spot signature is $5200\pm25$ K. This is similar to the optical spectroscopic temperature determined by Mathieu+2003, which is expected as the optical spectrum will have less significant spot signatures than the IGRINS spectrum in the NIR.
+
+The presence of spots impacts the effective temperature of S1063. Taking into account both temperature components, we can calculate the effective temperature using
+\begin{equation}
+T_{\textrm{eff}}^4 = f_{\textrm{spot}} T_{\textrm{spot}}^4 + (1 -f_{\textrm{spot}}) T_{\textrm{ambient}}^4 .
+\end{equation}
+This results in an updated effective temperature of 4900 K.
+
+The IGRINS observation occurred at maximum light (LIGHT CURVE FIGURE), so this measurement of the spot filling factor is a lower limit on the total spot filling factor of S1063. We can estimate the filling factor at minimum light...
+
+This spot coverage fraction is similar to the range of spot coverage seen on RS CVn of 30--40\% from measuring TiO band strength (O'Neal+ 1996, 98, 04) and Doppler imaging (Hackman+12). The similar spot coverage fraction on S1063 is further evidence that this sub-subgiant and likely other sub-subgiants have high magnetic activity.
+
 \begin{itemize}
 \item We detect spots in spectra
 \begin{itemize}
-  \item S1063 has ~X\% coverage fraction of spots with Tspot ~ Y based on IGRINS + Starfish
-  \item *bonus* Revised effective temperature using both temperature components $[f_{\textrm{spot}} * T_{\textrm{spot}}^4 + (1 -f_{\textrm{spot}}) * T_{\textrm{ambient}}^4] = T_{\textrm{eff}}^4$
+  \item S1063 has $32 \pm 7$\% coverage fraction of spots with Tspot $4000\pm200$ K based on IGRINS + Starfish
+  \item Revised effective temperature using both temperature components $[f_{\textrm{spot}} * T_{\textrm{spot}}^4 + (1 -f_{\textrm{spot}}) * T_{\textrm{ambient}}^4] = T_{\textrm{eff}}^4$
+
   \item *bonus* Rsini
 \end{itemize}
 \item IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
+\item *bonus* total spot filling factor estimate given light curve magnitude
 \item FIGURE: $T_{spot}$ versus $f_{spot}$ plot
 
 
-\begin{figure*}[h]
-  \centering
-  \begin{tabular}{ccc}
-    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m119.pdf}} &
-    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m118.pdf}} &
-    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m116.pdf}} \\
-    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m114.pdf}} &
-    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m113.pdf}} &
-    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m110.pdf}} \\
-    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m109.pdf}} &
-    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m107.pdf}} &
-    \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m106.pdf}}
-  \end{tabular}
-\caption{Tspot vs filling factor}
-\end{figure*}
+% \begin{figure*}[h]
+%   \centering
+%   \begin{tabular}{c}
+%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m119.pdf}}
+%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m118.pdf}} &
+%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m116.pdf}} \\
+%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m114.pdf}} &
+%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m113.pdf}} &
+%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m110.pdf}} \\
+%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m109.pdf}} &
+%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m107.pdf}} &
+%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m106.pdf}}
+%   \end{tabular}
+% \caption{2-dimensional distributions of filling factor and spot temperature for the nine accepted IGRINS orders for S1063. The median filling factor across these nine orders is $32 \pm 7$\% with a spot temperature of $4000\pm200$ K. As the IGRINS spectrum was observed at maximum light, these show a lower limit on the total spot coverage fraction. }
+% \end{figure*}
 
 \item What coverage fraction would we have measured across the rotational phase?
 \end{itemize}
