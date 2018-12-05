@@ -57,6 +57,14 @@ We measure the starspots on a sub sub giant.
 We do not know what causes some sub-sub giants!
 But now we know a little... more. Hence this paper!
 
+Sub-subgiant stars are stars that lie below the subgiant branch on a cluster optical color-magnitude diagram (CMD), but are too red to be main sequence stars. These stars are commonly found in evolved open clusters and globular clusters, with 65 sub-subgiants currently identified across 17 different clusters \citep{geller17}. The majority of sub-subgiant stars are single-lined spectroscopic binaries with short orbital periods of a few days with moderate X-ray luminosities of $10^{30}$ to $10^{31}$ erg s$^{-1}$ \citep[and references therein]{geller17}.
+
+The presence of sub-subgiants cannot be explained with typical single-star stellar evolutionary pathways. Three possible formation scenarios for sub-subgiants were put forth by \citet{leiner17}: mass transfer in a binary system, stripping of a subgiant star envelope through a dynamical encounter, and reduced luminosity as a result of inhibited convection due to the presence of strong magnetic fields. \citet{leiner17} conclude that strong magnetic fields due to binary interactions would produce the largest number of sub-subgiants.
+
+In this paper we focus on a single sub-subgiant system, S1063 in the open cluster M67. This system is a prototypical sub-subgiant star, with an single-lined spectroscopic orbital period of 18.4 days \citep{geller17}, an X-ray luminosity of $1.3\times10^{31}$ erg s$^{-1}$ \citep{vandenberg99}, and a variable light curve in \textit{K2} (REF LIGHT CURVE SECTION?).
+
+
+
 %Fill in more theory here
 \citet{somers15} emphasized the roll of starspots in inferring stellar ages.
 
@@ -100,9 +108,9 @@ But now we know a little... more. Hence this paper!
 \item Phase folded archival V-band photometry (ASASSN+)
 \subsection{IGRINS two-temperature spectral inference w/ Starfish}
 
-We performed two-temperature probabilistic spectral decomposition on the IGRINS $H-$band spectrum.  We applied the spectral inference framework \texttt{Starfish} \citep{czekala15}, recently extended to support composite spectra comprised of mixtures of two distinct photospheric components \citep{2017ApJ...836..200G}.  Here, the two temperature components are labeled as $T_{\mathrm{spot}}$ and $T_{\mathrm{amb}}$ for the starspot and ambient photospheric emission respectively, with a filling factor $f$ defined as the ratio of collective projected surface area of the spot groups to the projected area of the star.
+We performed two-temperature probabilistic spectral decomposition on the IGRINS $H-$band spectrum.  We applied the spectral inference framework \texttt{Starfish} \citep{czekala15}, recently extended to support composite spectra comprised of mixtures of two distinct photospheric components \citep{gullysantiago17}.  Here, the two temperature components are labeled as $T_{\mathrm{spot}}$ and $T_{\mathrm{amb}}$ for the starspot and ambient photospheric emission respectively, with a filling factor $f$ defined as the ratio of collective projected surface area of the spot groups to the projected area of the star.
 
-We employed the \texttt{PHOENIX} precomputed synthetic model grid with grid ranges of $3000 < T_{\mathrm{eff}} \; (K) < 5300 $, $3 < \log{g \;(cm/s)}  < 4 $, and $ -0.5 <  [\mathrm{Fe}/\mathrm{H}] <0.5$.  We trained the spectral emulator \citep{czekala15} on this grid range, while preserving the absolute model mean fluxes to enable accurate flux comparison between two photospheres of disparate characteristic temperatures.  This new approach offers improved accuracy over the scalar flux interpolated approach introduced in Appendix XX of \citet{2017ApJ...836..200G}, especially for such a large dynamic range in effective temperature.  The spectral emulator approach propagates the uncertainty attributable to the coarsely sampled \texttt{PHOENIX} models.
+We employed the \texttt{PHOENIX} precomputed synthetic model grid with grid ranges of $3000 < T_{\mathrm{eff}} \; (K) < 5300 $, $3 < \log{g \;(cm/s)}  < 4 $, and $ -0.5 <  [\mathrm{Fe}/\mathrm{H}] <0.5$.  We trained the spectral emulator \citep{czekala15} on this grid range, while preserving the absolute model mean fluxes to enable accurate flux comparison between two photospheres of disparate characteristic temperatures.  This new approach offers improved accuracy over the scalar flux interpolated approach introduced in Appendix XX of \citet{gullysantiago17}, especially for such a large dynamic range in effective temperature.  The spectral emulator approach propagates the uncertainty attributable to the coarsely sampled \texttt{PHOENIX} models.
 
 The pre-defined grid ranges place uniform priors over their domain.  Additionally, a threshold of 4500 K separated the allowed domains for the spot and ambient temperatures, yielding uniform priors $3000 < T_{\mathrm{spot}} \; (K) < 4500 $ and $4500 < T_{\mathrm{amb}} \; (K) < 5300$.
 
@@ -128,7 +136,7 @@ We additionally spot-checked the MCMC posteriors with posterior predictive check
 
 \section{Results}
 
-Using the \texttt{Starfish} spectral inference results we investigate the relationship between spot temperature and filling factor. In Figure XX we show 2-dimensional distributions of filling factor and spot temperature of the last 200 samples for the nine orders with accepted fits. Across the nine orders, the median filling factor value is 32\% with a standard deviation of 7\%, with a corresponding spot temperature of $4000 \pm 200$ K. The ambient photosphere temperature ssociated with this spot signature is $5200\pm25$ K. This is similar to the optical spectroscopic temperature determined by Mathieu+2003, which is expected as the optical spectrum will have less significant spot signatures than the IGRINS spectrum in the NIR.
+Using the \texttt{Starfish} spectral inference results we investigate the relationship between spot temperature and filling factor. In Figure XX we show 2-dimensional distributions of filling factor and spot temperature of the last 200 samples for the nine orders with accepted fits. Across the nine orders, the median filling factor value is 32\% with a standard deviation of 7\%, with a corresponding spot temperature of $4000 \pm 200$ K. The ambient photosphere temperature ssociated with this spot signature is $5200\pm25$ K. This is similar to the optical spectroscopic temperature determined by \citet{mathieu03}, which is expected as the optical spectrum will have less significant spot signatures than the IGRINS spectrum in the NIR.
 
 The presence of spots impacts the effective temperature of S1063. Taking into account both temperature components, we can calculate the effective temperature using
 \begin{equation}
@@ -136,9 +144,9 @@ T_{\textrm{eff}}^4 = f_{\textrm{spot}} T_{\textrm{spot}}^4 + (1 -f_{\textrm{spot
 \end{equation}
 This results in an updated effective temperature of 4900 K.
 
-The IGRINS observation occurred at maximum light (LIGHT CURVE FIGURE), so this measurement of the spot filling factor is a lower limit on the total spot filling factor of S1063. We can estimate the filling factor at minimum light...
+The IGRINS observation occurred at maximum light (REF LIGHT CURVE FIGURE), so this measurement of the spot filling factor is a lower limit on the total spot filling factor of S1063. We can estimate the filling factor at minimum light...
 
-This spot coverage fraction is similar to the range of spot coverage seen on RS CVn of 30--40\% from measuring TiO band strength (O'Neal+ 1996, 98, 04) and Doppler imaging (Hackman+12). The similar spot coverage fraction on S1063 is further evidence that this sub-subgiant and likely other sub-subgiants have high magnetic activity.
+This spot coverage fraction is similar to the range of spot coverage seen on RS CVn of 30--40\% from measuring TiO band strength \citep{oneal96, oneal98, oneal04} and Doppler imaging \citep{hackman12}. The similar spot coverage fraction on S1063 is further evidence that this sub-subgiant and likely other sub-subgiants have high magnetic activity.
 
 \begin{itemize}
 \item We detect spots in spectra
