@@ -3,7 +3,7 @@
 %\documentclass[12pt,preprint]{aastex}
 
 \usepackage{graphicx}
-\usepackage{subfigure}
+\usepackage[caption=false]{subfig}
 %\usepackage{lineno}
 %\usepackage{blindtext}
 %\linenumbers
@@ -153,21 +153,21 @@ This spot coverage fraction is similar to the range of spot coverage seen on RS 
 \item FIGURE: $T_{spot}$ versus $f_{spot}$ plot
 
 
-% \begin{figure*}[h]
-%   \centering
-%   \begin{tabular}{c}
-%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m119.pdf}}
-%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m118.pdf}} &
-%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m116.pdf}} \\
-%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m114.pdf}} &
-%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m113.pdf}} &
-%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m110.pdf}} \\
-%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m109.pdf}} &
-%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m107.pdf}} &
-%     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m106.pdf}}
-%   \end{tabular}
-% \caption{2-dimensional distributions of filling factor and spot temperature for the nine accepted IGRINS orders for S1063. The median filling factor across these nine orders is $32 \pm 7$\% with a spot temperature of $4000\pm200$ K. As the IGRINS spectrum was observed at maximum light, these show a lower limit on the total spot coverage fraction. }
-% \end{figure*}
+ \begin{figure*}[h]
+   \centering
+   \begin{tabular}{ccc}
+     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m119.pdf}} &
+     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m118.pdf}} &
+     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m116.pdf}} \\
+     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m114.pdf}} &
+     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m113.pdf}} &
+     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m110.pdf}} \\
+     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m109.pdf}} &
+     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m107.pdf}} &
+     \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m106.pdf}}
+   \end{tabular}
+ \caption{2-dimensional distributions of filling factor and spot temperature for the nine accepted IGRINS orders for S1063. The median filling factor across these nine orders is $32 \pm 7$\% with a spot temperature of $4000\pm200$ K. As the IGRINS spectrum was observed at maximum light, these show a lower limit on the total spot coverage fraction. }
+ \end{figure*}
 
 \item What coverage fraction would we have measured across the rotational phase?
 \end{itemize}

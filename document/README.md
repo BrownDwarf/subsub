@@ -26,16 +26,16 @@
 			- [ ] Multi-term Lomb-Scargle + Fourier reconstruction
 	- [ ] Phase folded archival V-band photometry (ASASSN+)
 	- [ ] IGRINS two-temperature spectral inference w/ Starfish
-		- [ ] MCMC convergence and posterior predictive checks
-		- [ ] `figure:` IGRINS Spectra
+		- [x] MCMC convergence and posterior predictive checks
+		- [x] `figure:` IGRINS Spectra
 		- [ ] Internal consistency of vsini, v_z
-		- [ ] `figure:` Violin plot
-	- [ ] Analysis of near-IR flux contribution from binary companion
-		- [ ] Limits on companion types
+	- [ ] Limits on companion contribution
+		- [ ] Via Near-IR flux contribution from binary companion
+		- [ ] Via Velocity-based
 - **Results**
 	- [ ] We detect spots in spectra
-		- [ ] S1063 has ~X% coverage fraction of spots with T_spot ~ Y based on IGRINS + Starfish
-		- [ ] *bonus* Revised effective temperature using both temperature components [f_spot * T_spot^4 + (1 -f_spot) * T_ambient^4] = Teff^4
+		- [x] S1063 has ~X% coverage fraction of spots with T_spot ~ Y based on IGRINS + Starfish
+		- [x] *bonus* Revised effective temperature using both temperature components [f_spot * T_spot^4 + (1 -f_spot) * T_ambient^4] = Teff^4
 		- [ ] *bonus* Rsini
 	- [ ] IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
 	- [x] `figure:` T_spot versus f_spot plot
