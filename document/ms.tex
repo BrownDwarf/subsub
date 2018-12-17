@@ -24,7 +24,6 @@
 \newcommand{\project}[1]{\textsl{#1}}
 %\def\vsini{$v\sin{i_*}$}
 
-
 \slugcomment{In preparation}
 
 \shorttitle{Spots on Sub-subgiants}
@@ -63,6 +62,12 @@ The presence of sub-subgiants cannot be explained with typical single-star stell
 
 In this paper we focus on a single sub-subgiant system, S1063 in the open cluster M67. This system is a prototypical sub-subgiant star, with an single-lined spectroscopic orbital period of 18.4 days \citep{geller17}, an X-ray luminosity of $1.3\times10^{31}$ erg s$^{-1}$ \citep{vandenberg99}, and a variable light curve in \textit{K2} (REF LIGHT CURVE SECTION?).
 
+\subsection{Starspots as confounding factors}
+Mass, age, and metallicity uniquely map a main sequence star to its HR diagram position.  A fourth factor---rotation---confounds this mapping in as-yet-unknown ways.  Rotation might enhance spread in HR diagram positions (cite XX Davenport, Douglas?), with the most conspicuous spreads in the pre-main sequence regime (cite XX Covey, Stauffer).  Spreads in the HR diagram offer clues to the consequences of rotation.  Increased rotation heightens the magnetic dynamo strength and concommitant surface magnetic field.  These magnetic fields suppress convective efficiency, meaning the star must increase in size at a lower effective temperature to allow the same amount of internal energy to escape (cite XX Feiden): rotating stars become bigger and cooler than their non-rotating counterparts (cite XX Somers).  The interplay of rotation, dynamo, and surface fields remain an active area of research, with bright prospects for a unified theory involving the degree of magnetic complexity parameter (cite XX Garraffo).
+
+Surface magnetic fields offer two key observational manifestations.  The Zeeman Effect splits spectral line levels in magnetic-sensitive atomic transitions (cite XX Johns-Krull).  Starspots induce stellar surface inhomogeneities that can be seen in the modulation of
+
+The story in the post-main sequence is less clear.  Angular momentum transport governs rotation  as stars evolve over orders of magnitude in size.
 
 
 %Fill in more theory here
@@ -136,17 +141,17 @@ We additionally spot-checked the MCMC posteriors with posterior predictive check
 
 \section{Results}
 
-Using the \texttt{Starfish} spectral inference results we investigate the relationship between spot temperature and filling factor. In Figure XX we show 2-dimensional distributions of filling factor and spot temperature of the last 200 samples for the nine orders with accepted fits. Across the nine orders, the median filling factor value is 32\% with a standard deviation of 7\%, with a corresponding spot temperature of $4000 \pm 200$ K. The ambient photosphere temperature ssociated with this spot signature is $5200\pm25$ K. This is similar to the optical spectroscopic temperature determined by \citet{mathieu03}, which is expected as the optical spectrum will have less significant spot signatures than the IGRINS spectrum in the NIR.
+Using the \texttt{Starfish} spectral inference results we investigate the relationship between spot temperature and filling factor. In Figure~\ref{fig:tspot_fillingfactor3x3} we show 2-dimensional distributions of filling factor and spot temperature of the last 200 samples for the nine orders with accepted fits. Similar trends between spot temperature and filling factor appear across most of the orders. Across all nine orders, the median filling factor value is 32\% with a standard deviation of 7\%, with a corresponding spot temperature of $4000 \pm 200$ K. The ambient photosphere temperature associated with this spot signature is $5200\pm25$ K. This is similar to the optical spectroscopic temperature of 5000 K determined by \citet{mathieu03}, which is expected as the optical spectrum will have less significant spot signatures than the IGRINS spectrum in the NIR.
 
-The presence of spots impacts the effective temperature of S1063. Taking into account both temperature components, we can calculate the effective temperature using
+The presence of spots impacts the effective temperature of S1063. Taking into account both temperature components, we calculate the effective temperature using
 \begin{equation}
 T_{\textrm{eff}}^4 = f_{\textrm{spot}} T_{\textrm{spot}}^4 + (1 -f_{\textrm{spot}}) T_{\textrm{ambient}}^4 .
 \end{equation}
-This results in an updated effective temperature of 4900 K.
+This results in an updated effective temperature for S1063 of $4900\pm125$ K.
 
-The IGRINS observation occurred at maximum light (REF LIGHT CURVE FIGURE), so this measurement of the spot filling factor is a lower limit on the total spot filling factor of S1063. We can estimate the filling factor at minimum light...
+Over the course of \textit{K2} C5, the IGRINS spectrum was observed at approximately 97\% of maximum light (REF LIGHT CURVE FIGURE). From a first-order interpretation of light curve amplitudes, minimum light corresponds to the largest star spot coverage while maximum light corresponds to the least star spot coverage, although these assumptions are complicated by the possibility of spot evolution \citep{basri18}. At the time of observation, these spectral inference results suggest that the lower limit on the total star spot coverage of S1063 is approximately 32\%. We note that, in this case, the light curve maximum is not consistent with zero spot coverage. As seen in Figure LIGHT CURVE, during \textit{K2} C5 the absolute light curve minimum (occuring at HJD **some date here**) was approximately 5\% lower than the flux at the time of observation. This suggests that the maximum spot filling factor during the time of C5 was closer to 40\%.
 
-This spot coverage fraction is similar to the range of spot coverage seen on RS CVn of 30--40\% from measuring TiO band strength \citep{oneal96, oneal98, oneal04} and Doppler imaging \citep{hackman12}. The similar spot coverage fraction on S1063 is further evidence that this sub-subgiant and likely other sub-subgiants have high magnetic activity.
+
 
 \begin{itemize}
 \item We detect spots in spectra
@@ -174,13 +179,20 @@ This spot coverage fraction is similar to the range of spot coverage seen on RS 
      \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m107.pdf}} &
      \subfloat{\includegraphics[width=2in]{figures/H_band_Tspot_fillingfactor_m106.pdf}}
    \end{tabular}
- \caption{2-dimensional distributions of filling factor and spot temperature for the nine accepted IGRINS orders for S1063. The median filling factor across these nine orders is $32 \pm 7$\% with a spot temperature of $4000\pm200$ K. As the IGRINS spectrum was observed at maximum light, these show a lower limit on the total spot coverage fraction. }
+ \caption{2-dimensional distributions of filling factor and spot temperature for the nine accepted IGRINS orders for S1063. The median filling factor across these nine orders is $32 \pm 7$\% with a spot temperature of $4000\pm200$ K. As the IGRINS spectrum was observed near maximum light, these show a lower limit on the total spot coverage fraction. }
+ \label{fig:tspot_fillingfactor3x3}
  \end{figure*}
 
 \item What coverage fraction would we have measured across the rotational phase?
 \end{itemize}
 
 \section{Discussion}
+
+
+The spot coverage fraction measured here is consistent with the range of spot coverage seen on RS CVn of 30--40\% from measuring TiO band strength \citep{oneal96, oneal98, oneal04} and Doppler imaging \citep{hackman12}. The similar spot coverage fraction on S1063 is further evidence that this sub-subgiant and likely other sub-subgiants have high magnetic activity.
+
+In the absence of this spectral inference technique one could assume the \textit{K2} C5 light curve maximum corresponded to zero spot presence with the light curve amplitude change implying a maximum spot coverage of 7--10\%. This provides a fundamentally different view of the star ...
+
 \begin{itemize}
 \item Spot coverage is consistent with formation theories
 \item Conceivable geometries with circumpolar active longitudes, or migrating active latitudes

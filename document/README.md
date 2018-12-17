@@ -37,9 +37,9 @@
 		- [x] S1063 has ~X% coverage fraction of spots with T_spot ~ Y based on IGRINS + Starfish
 		- [x] *bonus* Revised effective temperature using both temperature components [f_spot * T_spot^4 + (1 -f_spot) * T_ambient^4] = Teff^4
 		- [ ] *bonus* Rsini
-	- [ ] IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
+	- [x] IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
 	- [x] `figure:` T_spot versus f_spot plot
-	- [ ] What coverage fraction would we have measured across the rotational phase?
+	- [x] What coverage fraction would we have measured across the rotational phase?
 - **Discussion**
 	- [ ] Spot coverage is consistent with formation theories
 	- [ ] Conceivable geometries with circumpolar active longitudes, or migrating active latitudes
