@@ -21,10 +21,11 @@
 	- [ ] Summary and assumptions of our methods
 	- [ ] K2 Superstamp(s)
 		- [ ] K2 detrending
+		- [ ] Zero points with FFIs or super stamps
 		- [ ] Interpreting lightcurves
 		- [ ] Period and amplitude of lightcurve
 			- [ ] Multi-term Lomb-Scargle + Fourier reconstruction
-	- [ ] Phase folded archival V-band photometry (ASASSN+)
+	- [ ] Archival V-band photometry (ASASSN+)
 	- [ ] IGRINS two-temperature spectral inference w/ Starfish
 		- [x] MCMC convergence and posterior predictive checks
 		- [x] `figure:` IGRINS Spectra
@@ -37,7 +38,7 @@
 		- [x] S1063 has ~X% coverage fraction of spots with T_spot ~ Y based on IGRINS + Starfish
 		- [x] *bonus* Revised effective temperature using both temperature components [f_spot * T_spot^4 + (1 -f_spot) * T_ambient^4] = Teff^4
 		- [ ] *bonus* Rsini
-	- [x] IGRINS observations occurred at maximum of lightcurve, so total spot coverage is even greater
+	- [x] IGRINS observations occurred at flux loss of X% of global maximum, max spot coverage of Y occurred in year 2012
 	- [x] `figure:` T_spot versus f_spot plot
 	- [x] What coverage fraction would we have measured across the rotational phase?
 - **Discussion**
