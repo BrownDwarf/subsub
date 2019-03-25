@@ -94,13 +94,33 @@ The story in the post-main sequence is less clear.  Angular momentum transport g
 
 \section{Observation and data reduction}
 \subsection{IGRINS observations}
-A high resolution spectrum of S1063 was acquired with the $R=45,000$ Immersion Grating Infrared Spectrograph \citep[IGRINS;][]{park14} at UT 2015-04-26 $03^h29^m$ at the $2.7\;$m Harlan J. Smith Telescope at McDonald Observatory.  Eight 600-second individual exposures were acquired in an ABBA nod pattern at an airmass of 1.2.  The sky emission lines and telluric lines were removed with the IGRINS Pipeline Package  \citep[PLP;][]{jaejoonlee16} and a reference A0V star acquired nearby in time and airmass.  The $H-$band spectra exhibited signal-to-noise ratio $S/N\sim30-80$ per pixel (check XX).  The $K-$band spectra possessed low $S/N$ and were excluded from further analysis.
+A high resolution spectrum of S1063 was acquired with the $R=45,000$ Immersion Grating Infrared Spectrograph \citep[IGRINS;][]{park14} at UT 2015-04-26 $03^h29^m$ at the $2.7\;$m Harlan J. Smith Telescope at McDonald Observatory.  Eight 600-second individual exposures were acquired in an ABBA nod pattern at an airmass of 1.2.  The sky emission lines and telluric lines were removed with the IGRINS Pipeline Package  \citep[PLP;][]{jaejoonlee16} and a reference A0V star acquired nearby in time and airmass.
+The $H-$band spectra exhibited signal-to-noise ratio $S/N\sim30-80$ per pixel (\textbf{verify XX}).
+The $K-$band spectra possessed low $S/N$ and were excluded from further analysis.
 
 
 \subsection{K2 superstamp lightcurves}
-K2 data Campaigns 5, 16, 18 Superstamps and detrending
+The \emph{Kepler} spacecraft targeted S0163 (EPIC 211414597) during the \emph{K2} mission \citep{howell14} in Campaigns 5, 16, 18 as part of the M67 superstamps.  The instrumental point spread function (PSF) of S1063 fell entirely within the oversized K2 target pixel files in Campaign 5 (K2 Custom Aperture ID 200008674) and Campaign 18 (K2 Custom Aperture ID 200233338).  Aperture photometry was conducted with interactively-assigned custom apertures using the \texttt{lightkurve .interact()} feature \citep{geert_barentsen_2019_2565212}. The apertures were chosen to minimize flux-loss out of the aperture due to spacecraft-induced image motion, while avoiding low-$S/N$ pixels and the wings of adjacent PSFs.  The Campaign 16 source PSF overlapped the border of two custom apertures (\textbf{numbers XX and XX}), which were stitched together before conducting aperture photometry.
+We detrended motion-induced image artifacts with the Self Flat Field algorithm \citep{vanderburg14} implemented in \texttt{lightkurve}.  Postage stamp images are shown in Figure \textbf{ref XX}.
+
+\begin{figure*}[htb!]
+  \centering
+  \begin{tabular}{ccccc}
+    \subfloat{\includegraphics[width=1in]{figures/S1063_60x60arcsec_PS1_g.png}} &
+    \subfloat{\includegraphics[width=1in]{figures/S1063_60x60arcsec_2M_J.png}} &
+    \subfloat{\includegraphics[width=1in]{figures/S1063_60x60arcsec_K2_C5.png}} &
+    \subfloat{\includegraphics[width=1in]{figures/S1063_60x60arcsec_K2_C16.png}} &
+    \subfloat{\includegraphics[width=1in]{figures/S1063_60x60arcsec_K2_C18.png}} \\
+  \end{tabular}
+\caption{Imaging of S1063 in $60'' \times 60''$ postage stamps. \emph{left-to-right:} Pan-STARRS $g$-band co-added image contemporaneous with C16; 2MASS $J-$band; K2 Campaigns 5, 16, 18.}
+\label{fig:imaging}
+\end{figure*}
+
+
 \subsection{Ground-based photometric monitoring}
-ASASSN, AAVSO, ASAS
+The retrieved $V-$ band photometry from the All-Sky Automated Survey for Supernovae \citep[ASAS-SN][]{shappee14} using the ``Precomputed Light Curve'' provided in the Variable Stars Database (source ASASSN-V J085113.44+115139.7) and $g-$band photometry from the Sky Portal \citep{2017PASP..129j4502K}.  The $\sim8''$ pixels may cause some PSF blending of the nearby-albeit-fainter source seen at the bottom of Figure \ref{fig:imaging}.
+
+
 \subsection{Gaia data}
 M67 membership confirmed
 
