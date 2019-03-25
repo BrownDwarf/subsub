@@ -93,20 +93,24 @@ The story in the post-main sequence is less clear.  Angular momentum transport g
 \end{itemize}
 
 \section{Observation and data reduction}
-\begin{itemize}
-\item IGRINS observations
-\item Ground-based photometric monitoring- ASASSN, AAVSO, ASAS
-\item K2 data (Campaign 5), *stretch goal* C16
-\item *stretch goal* APOGEE?
-\item Gaia data (membership confirmed)
-\end{itemize}
+\subsection{IGRINS observations}
+A high resolution spectrum of S1063 was acquired with the $R=45,000$ Immersion Grating Infrared Spectrograph \citep[IGRINS;][]{park14} at UT 2015-04-26 $03^h29^m$ at the $2.7\;$m Harlan J. Smith Telescope at McDonald Observatory.  Eight 600-second individual exposures were acquired in an ABBA nod pattern at an airmass of 1.2.  The sky emission lines and telluric lines were removed with the IGRINS Pipeline Package  \citep[PLP;][]{jaejoonlee16} and a reference A0V star acquired nearby in time and airmass.  The $H-$band spectra exhibited signal-to-noise ratio $S/N\sim30-80$ per pixel (check XX).  The $K-$band spectra possessed low $S/N$ and were excluded from further analysis.
+
+
+\subsection{K2 superstamp lightcurves}
+K2 data Campaigns 5, 16, 18 Superstamps and detrending
+\subsection{Ground-based photometric monitoring}
+ASASSN, AAVSO, ASAS
+\subsection{Gaia data}
+M67 membership confirmed
+
 
 \section{Analysis}
 \begin{itemize}
 \item Summary and assumptions of our methods
-\item K2 Superstamp(s)
+\item K2 data
 \begin{itemize}
-  \item K2 detrending
+  \item Zero points with FFIs or super stamps
   \item Interpreting lightcurves
   \item Period and amplitude of lightcurve, with multi-term Lomb-Scargle + Fourier reconstruction
 \end{itemize}
@@ -143,18 +147,20 @@ We additionally spot-checked the MCMC posteriors with posterior predictive check
 
 Using the \texttt{Starfish} spectral inference results we investigate the relationship between spot temperature and filling factor. In Figure~\ref{fig:tspot_fillingfactor3x3} we show 2-dimensional distributions of filling factor and spot temperature of the last 200 samples for the nine orders with accepted fits. Similar trends between spot temperature and filling factor appear across most of the orders. Across all nine orders, the median filling factor value is 32\% with a standard deviation of 7\%, with a corresponding spot temperature of $4000 \pm 200$ K. The ambient photosphere temperature associated with this spot signature is $5200\pm25$ K. This is similar to the optical spectroscopic temperature of 5000 K determined by \citet{mathieu03}, which is expected as the optical spectrum will have less significant spot signatures than the IGRINS spectrum in the NIR.
 
-The presence of spots impacts the effective temperature of S1063. Taking into account both temperature components, we calculate the effective temperature using
+From the 4-year light curve of S1063 (REF LIGHT CURVE FIGURE) we determine that the IGRINS spectrum was observed at a local maximum in the stellar variability, but this flux was approximately 7\% below the global maximum over the four year period covered by ASAS-SN and \textit{K2}. From a first-order interpretation of light curve amplitudes, minimum light corresponds to the largest star spot coverage while maximum light corresponds to the least star spot coverage, although these assumptions are complicated by the possibility of spot evolution \citep{basri18}. Assuming non-emitting spots, the stellar surface must be at least 7\% covered at the time of the IGRINS observation to account for the overall suppression in the maximum flux. If we adopt an ambient photosphere temperature of 5200 K and a spot temperature of 4000 K, the spot coverage would have to be 10\% to account for the flux suppression. At the time of observation, these spectral inference results show that the spot coverage was actually 32\%. This suggests that at the 4-year light curve maximum of S1063, the spot coverage was still around 20\% and definitely not an unspotted star. As seen in Figure LIGHT CURVE, the absolute light curve minimum (occuring at HJD **SOME DATE HERE**) was approximately 13\% lower than the flux at the time of observation. We conclude that the maximum spot filling factor at that time was closer to 50\%.
+
+The time average spot coverage fraction is AMOUNT over the four years, and with that we can calculate the time averaged effective temperature...
+
+(UPDATE THIS WITH TIME AVERAGED SPOT NUMBERS) The presence of spots impacts the effective temperature of S1063. Taking into account both temperature components, we calculate the effective temperature using
 \begin{equation}
 T_{\textrm{eff}}^4 = f_{\textrm{spot}} T_{\textrm{spot}}^4 + (1 -f_{\textrm{spot}}) T_{\textrm{ambient}}^4 .
 \end{equation}
 This results in an updated effective temperature for S1063 of $4900\pm125$ K.
 
-Over the course of \textit{K2} C5, the IGRINS spectrum was observed at approximately 97\% of maximum light (REF LIGHT CURVE FIGURE). From a first-order interpretation of light curve amplitudes, minimum light corresponds to the largest star spot coverage while maximum light corresponds to the least star spot coverage, although these assumptions are complicated by the possibility of spot evolution \citep{basri18}. At the time of observation, these spectral inference results suggest that the lower limit on the total star spot coverage of S1063 is approximately 32\%. We note that, in this case, the light curve maximum is not consistent with zero spot coverage. As seen in Figure LIGHT CURVE, during \textit{K2} C5 the absolute light curve minimum (occuring at HJD **some date here**) was approximately 5\% lower than the flux at the time of observation. This suggests that the maximum spot filling factor during the time of C5 was closer to 40\%.
-
 
 
 \begin{itemize}
-\item We detect spots in spectra
+\item We MEASURE spots in spectra
 \begin{itemize}
   \item S1063 has $32 \pm 7$\% coverage fraction of spots with Tspot $4000\pm200$ K based on IGRINS + Starfish
   \item Revised effective temperature using both temperature components $[f_{\textrm{spot}} * T_{\textrm{spot}}^4 + (1 -f_{\textrm{spot}}) * T_{\textrm{ambient}}^4] = T_{\textrm{eff}}^4$
@@ -223,6 +229,9 @@ Short answer: no!
 
 %ADS
 We thank ADS!
+
+%IGRINS
+This work used the Immersion Grating Infrared Spectrometer(IGRINS) that was developed under a collaboration between the University of Texas at Austin and the Korea Astronomy and Space Science Institute (KASI) with the financial support of the US National Science Foundation under grant AST-1229522, of the University of Texas at Austin, and of the Korean GMT Project of KASI.
 
 %Kepler
 This paper includes data collected by the Kepler mission. Funding for the Kepler mission is provided by the NASA Science Mission directorate.

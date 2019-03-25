@@ -14,7 +14,7 @@
 - **Observations and data reduction**
 	- [ ] IGRINS observations
 	- [ ] Ground-based photometric monitoring- ASASSN, AAVSO, ASAS
-	- [ ] K2 data Campaigns 5, 16, 18
+	- [ ] K2 data Campaigns 5, 16, 18 Superstamps and detrending
 	- [ ] *stretch goal* APOGEE?
 	- [ ] Gaia data (membership confirmed)
 - **Analysis**
