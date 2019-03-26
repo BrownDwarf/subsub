@@ -19,8 +19,7 @@
 	- [ ] Gaia data (membership confirmed)
 - **Analysis**
 	- [ ] Summary and assumptions of our methods
-	- [ ] K2 Superstamp(s)
-		- [ ] K2 detrending
+	- [ ] K2 data
 		- [ ] Zero points with FFIs or super stamps
 		- [ ] Interpreting lightcurves
 		- [ ] Period and amplitude of lightcurve

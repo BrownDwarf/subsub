@@ -98,12 +98,7 @@ A high resolution spectrum of S1063 was acquired with the $R=45,000$ Immersion G
 The $H-$band spectra exhibited signal-to-noise ratio $S/N\sim30-80$ per pixel (\textbf{verify XX}).
 The $K-$band spectra possessed low $S/N$ and were excluded from further analysis.
 
-
-\subsection{K2 superstamp lightcurves}
-The \emph{Kepler} spacecraft targeted S0163 (EPIC 211414597) during the \emph{K2} mission \citep{howell14} in Campaigns 5, 16, 18 as part of the M67 superstamps.  The instrumental point spread function (PSF) of S1063 fell entirely within the oversized K2 target pixel files in Campaign 5 (K2 Custom Aperture ID 200008674) and Campaign 18 (K2 Custom Aperture ID 200233338).  Aperture photometry was conducted with interactively-assigned custom apertures using the \texttt{lightkurve .interact()} feature \citep{geert_barentsen_2019_2565212}. The apertures were chosen to minimize flux-loss out of the aperture due to spacecraft-induced image motion, while avoiding low-$S/N$ pixels and the wings of adjacent PSFs.  The Campaign 16 source PSF overlapped the border of two custom apertures (\textbf{numbers XX and XX}), which were stitched together before conducting aperture photometry.
-We detrended motion-induced image artifacts with the Self Flat Field algorithm \citep{vanderburg14} implemented in \texttt{lightkurve}.  Postage stamp images are shown in Figure \textbf{ref XX}.
-
-\begin{figure*}[htb!]
+\begin{figure*}[hbt!]
   \centering
   \begin{tabular}{ccccc}
     \subfloat{\includegraphics[width=1in]{figures/S1063_60x60arcsec_PS1_g.png}} &
@@ -116,14 +111,16 @@ We detrended motion-induced image artifacts with the Self Flat Field algorithm \
 \label{fig:imaging}
 \end{figure*}
 
+\subsection{K2 superstamp lightcurves}
+The \emph{Kepler} spacecraft targeted S0163 (EPIC 211414597) during the \emph{K2} mission \citep{howell14} in Campaigns 5, 16, 18 as part of the M67 superstamps.  The instrumental point spread function (PSF) of S1063 fell entirely within the oversized K2 target pixel files in Campaign 5 (K2 Custom Aperture ID 200008674) and Campaign 18 (K2 Custom Aperture ID 200233338).  Aperture photometry was conducted with interactively-assigned custom apertures using the \texttt{lightkurve .interact()} feature \citep{geert_barentsen_2019_2565212}. The apertures were chosen to minimize flux-loss out of the aperture due to spacecraft-induced image motion, while avoiding low-$S/N$ pixels and the wings of adjacent PSFs.  The Campaign 16 source PSF overlapped the edge of Custom Aperture ID 200200534; a mosaic of adjacent superstamps was assembled before conducting aperture photometry.
+We detrended motion-induced image artifacts with the Self Flat Field algorithm \citep{vanderburg14} implemented in \texttt{lightkurve}.  Postage stamp images are shown in Figure \ref{fig:imaging}.
 
 \subsection{Ground-based photometric monitoring}
-The retrieved $V-$ band photometry from the All-Sky Automated Survey for Supernovae \citep[ASAS-SN][]{shappee14} using the ``Precomputed Light Curve'' provided in the Variable Stars Database (source ASASSN-V J085113.44+115139.7) and $g-$band photometry from the Sky Portal \citep{2017PASP..129j4502K}.  The $\sim8''$ pixels may cause some PSF blending of the nearby-albeit-fainter source seen at the bottom of Figure \ref{fig:imaging}.
-
+We retrieved All-Sky Automated Survey for Supernovae \citep[ASAS-SN][]{shappee14} lightcurves from the Sky Portal \citep{2017PASP..129j4502K}.  The lightcurves contained 758 epochs of $V-$ band photometry spanning 2013-2018 (source ASASSN-V J085113.44+115139.7) and 823 epochs of $g-$band photometry spanning mid-2017$-$2018.  The $\sim8''$ ASAS-SN pixels may cause some PSF blending of the nearby-albeit-fainter source seen at the bottom of Figure \ref{fig:imaging}.  The pixel images were not available to evaluate the extent of blending.
+%% Option: Pan-STARRS
 
 \subsection{Gaia data}
-M67 membership confirmed
-
+\emph{Gaia} DR2 astrometry \citep{2016A&A...595A...1G, 2018A&A...616A...1G} indicates a parallax ($1.17\pm0.025 \;$mas) and proper motion for S1063 (\emph{Gaia} DR2 604921030968952832) consistent with other M67 members, and approaching 100\% membership probability \citep{2018ApJ...869....9G}.
 
 \section{Analysis}
 \begin{itemize}
@@ -258,6 +255,14 @@ This paper includes data collected by the Kepler mission. Funding for the Kepler
 
 % MAST
 Some/all of the data presented in this paper were obtained from the Mikulski Archive for Space Telescopes (MAST). STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.
+
+%gaia
+This work has made use of data from the European Space Agency (ESA) mission
+{\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia}
+Data Processing and Analysis Consortium (DPAC,
+\url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC
+has been provided by national institutions, in particular the institutions
+participating in the {\it Gaia} Multilateral Agreement.
 
 
 {\it Facilities:} \facility{Smith (IGRINS)}, \facility{AAVSO}, \facility{INTEGRAL (OMC)}, \facility{ASAS}, \facility{Gaia}
