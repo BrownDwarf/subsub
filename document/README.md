@@ -15,12 +15,12 @@
 	- [x] IGRINS observations
 	- [x] Ground-based photometric monitoring- ASASSN, AAVSO, ASAS
 	- [x] K2 data Campaigns 5, 16, 18 Superstamps and detrending
-	- [x] *stretch goal* APOGEE?
+	- [x] Zero points with FFIs or super stamps
+	- [ ] *stretch goal* APOGEE?
 	- [x] Gaia data (membership confirmed)
 - **Analysis**
 	- [ ] Summary and assumptions of our methods
 	- [ ] K2 data
-		- [ ] Zero points with FFIs or super stamps
 		- [ ] Interpreting lightcurves
 		- [ ] Period and amplitude of lightcurve
 			- [ ] Multi-term Lomb-Scargle + Celerite Fourier reconstruction
