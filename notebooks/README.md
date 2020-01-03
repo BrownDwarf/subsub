@@ -1,7 +1,11 @@
 notebooks
 ---
 
-Structure of notebooks
+**Note** The notebook directory hierarchy was restructured from a flat directory in `notebooks` to the present tiered structure shown below.  Most notebooks were not re-run, and likely have broken relative links that assume the main project repo is only one directory back, *e.g.* `../data/` rather than `../../data/`.  
+If you attempt to *re-run* notebooks, you will likely need to change all instances of relative imports to reflect this change.
+
+
+### Structure of notebooks
 
 ```bash  
 ├── 01_initial_exploratory  
