@@ -2,10 +2,11 @@
 
 - **Introduction**
 	- [ ] What is a sub-subgiant?
-	- [ ] What causes sub sub giant stars (Leiner et al. 2017)
+	- [ ] What causes sub-subgiant stars (Leiner et al. 2017)
 	- [ ] M67 S1063
 		- [ ] Prototypical subsub (Geller et al. 2017)
 		- [ ] Binary orbit, SB1
+		- [ ] `Figure` S1063 on CMD
 	- [ ] Starspots as confounding factors
 		- [ ] Inhibit convective efficiency (redder and bigger)
 		- [ ] Also confound observations: assign incorrect Teff
@@ -29,9 +30,9 @@
 		- [x] MCMC convergence and posterior predictive checks
 		- [x] `figure:` IGRINS Spectra
 		- [ ] Internal consistency of vsini, v_z
-	- [ ] Limits on companion contribution
-		- [ ] Via Near-IR flux contribution from binary companion
-		- [ ] Via Velocity-based
+	- [ ] *bonus* Limits on companion contribution
+		- [ ] *bonus* Via Near-IR flux contribution from binary companion
+		- [ ] *bonus* Via Velocity-based
 - **Results**
 	- [ ] We detect spots in spectra
 		- [x] S1063 has ~X% coverage fraction of spots with T_spot ~ Y based on IGRINS + Starfish
@@ -44,8 +45,8 @@
 	- [ ] Spot coverage is consistent with formation theories
 	- [ ] Conceivable geometries with circumpolar active longitudes, or migrating active latitudes
 	- [ ] Biases introduced if we assume a spot-free model
-		- [x] ~~Where does subsub sit in a new HR diagram? (new Somers models)~~
-		- [x] ~~*bonus* `figure:` PMS HR diagram with new Somers tracks~~
-		- [ ] Spot impact on SED fits
+		- [ ] ~~Where does subsub sit in a new HR diagram? (new Somers models)~~
+		- [ ] `figure:` PMS HR diagram with new Somers tracks~~
+		- [ ] *bonus* Spot impact on SED fits
 - **Appendix**
 	- [ ] TBD
