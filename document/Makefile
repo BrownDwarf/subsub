@@ -1,11 +1,12 @@
 all: ms.pdf
 
 %.pdf: %.tex
-	pdflatex $<
-	pdflatex $<
-	bibtex ms
-	pdflatex ms
-	pdflatex ms
+	#pdflatex $<
+	#pdflatex $<
+	#bibtex ms
+	#pdflatex ms
+	#pdflatex ms
+	tectonic ms.tex
 	mv ms.pdf final/
 	cp ms.tex final/
 	rm -rf *Notes.bib

@@ -1,5 +1,5 @@
 # subsub :ship: :ship:
-An experimental sub-sub-giant project
+A project to measure starspot properties on a sub-sub-giant in M67
 
 ## Authors
 
@@ -9,7 +9,7 @@ An experimental sub-sub-giant project
 + Others...
 
 ## Dependencies:
-To run the Jupyter Notebooks you will probably need:
+To run the Jupyter Notebooks you will need:
 
 - python 3
 - jupyter-notebook
@@ -18,9 +18,9 @@ To run the Jupyter Notebooks you will probably need:
 - pandas
 - seaborn
 
-To run Starfish you will need Starfish and all of its dependencies.
+Running Starfish requires some specialized knowledge and customized starspot mixture model code.  You can get a start by reading the docs for [Starfish](https://github.com/iancze/Starfish) and all of its dependencies.
 
 
 License
 
-Copyright 2018 the Authors.  All rights reserved.
+Copyright 2018-2020 the Authors.  All rights reserved.

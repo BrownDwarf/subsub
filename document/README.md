@@ -16,14 +16,14 @@
 	- [x] Ground-based photometric monitoring- ASASSN, AAVSO, ASAS
 	- [x] K2 data Campaigns 5, 16, 18 Superstamps and detrending
 	- [x] Zero points with FFIs or super stamps
-	- [ ] *stretch goal* APOGEE?
+	- [x] ~~*stretch goal* APOGEE?~~
 	- [x] Gaia data (membership confirmed)
 - **Analysis**
 	- [ ] Summary and assumptions of our methods
 	- [ ] K2 data
 		- [ ] Interpreting lightcurves
 		- [ ] Period and amplitude of lightcurve
-			- [ ] Multi-term Lomb-Scargle + Celerite Fourier reconstruction
+			- [ ] `Figure` Celerite Fourier reconstruction
 	- [ ] Archival V-band photometry (ASASSN+)
 	- [ ] IGRINS two-temperature spectral inference w/ Starfish
 		- [x] MCMC convergence and posterior predictive checks
@@ -44,8 +44,8 @@
 	- [ ] Spot coverage is consistent with formation theories
 	- [ ] Conceivable geometries with circumpolar active longitudes, or migrating active latitudes
 	- [ ] Biases introduced if we assume a spot-free model
-		- [ ] Where does subsub sit in a new HR diagram? (new Somers models)
-		- [ ] *bonus* `figure:` PMS HR diagram with new Somers tracks
+		- [x] ~~Where does subsub sit in a new HR diagram? (new Somers models)~~
+		- [x] ~~*bonus* `figure:` PMS HR diagram with new Somers tracks~~
 		- [ ] Spot impact on SED fits
 - **Appendix**
 	- [ ] TBD
