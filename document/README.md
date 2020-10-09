@@ -12,18 +12,18 @@
 		- [ ] This paper aims to measure the starspot coverage and temp
 	- [ ] Layout of this paper
 - **Observations and data reduction**
-	- [ ] IGRINS observations
-	- [ ] Ground-based photometric monitoring- ASASSN, AAVSO, ASAS
-	- [ ] K2 data Campaigns 5, 16, 18 Superstamps and detrending
+	- [x] IGRINS observations
+	- [x] Ground-based photometric monitoring- ASASSN, AAVSO, ASAS
+	- [x] K2 data Campaigns 5, 16, 18 Superstamps and detrending
+	- [x] Zero points with FFIs or super stamps
 	- [ ] *stretch goal* APOGEE?
-	- [ ] Gaia data (membership confirmed)
+	- [x] Gaia data (membership confirmed)
 - **Analysis**
 	- [ ] Summary and assumptions of our methods
 	- [ ] K2 data
-		- [ ] Zero points with FFIs or super stamps
 		- [ ] Interpreting lightcurves
 		- [ ] Period and amplitude of lightcurve
-			- [ ] Multi-term Lomb-Scargle + Fourier reconstruction
+			- [ ] Multi-term Lomb-Scargle + Celerite Fourier reconstruction
 	- [ ] Archival V-band photometry (ASASSN+)
 	- [ ] IGRINS two-temperature spectral inference w/ Starfish
 		- [x] MCMC convergence and posterior predictive checks

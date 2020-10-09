@@ -53,9 +53,6 @@ We measure the starspots on a sub sub giant.
 
 \section{Introduction}\label{sec:intro}
 
-We do not know what causes some sub-sub giants!
-But now we know a little... more. Hence this paper!
-
 Sub-subgiant stars are stars that lie below the subgiant branch on a cluster optical color-magnitude diagram (CMD), but are too red to be main sequence stars. These stars are commonly found in evolved open clusters and globular clusters, with 65 sub-subgiants currently identified across 17 different clusters \citep{geller17}. The majority of sub-subgiant stars are single-lined spectroscopic binaries with short orbital periods of a few days with moderate X-ray luminosities of $10^{30}$ to $10^{31}$ erg s$^{-1}$ \citep[and references therein]{geller17}.
 
 The presence of sub-subgiants cannot be explained with typical single-star stellar evolutionary pathways. Three possible formation scenarios for sub-subgiants were put forth by \citet{leiner17}: mass transfer in a binary system, stripping of a subgiant star envelope through a dynamical encounter, and reduced luminosity as a result of inhibited convection due to the presence of strong magnetic fields. \citet{leiner17} conclude that strong magnetic fields due to binary interactions would produce the largest number of sub-subgiants.
@@ -107,13 +104,17 @@ The $K-$band spectra possessed low $S/N$ and were excluded from further analysis
     \subfloat{\includegraphics[width=1in]{figures/S1063_60x60arcsec_K2_C16.png}} &
     \subfloat{\includegraphics[width=1in]{figures/S1063_60x60arcsec_K2_C18.png}} \\
   \end{tabular}
-\caption{Imaging of S1063 in $60'' \times 60''$ postage stamps. \emph{left-to-right:} Pan-STARRS $g$-band co-added image contemporaneous with C16; 2MASS $J-$band; K2 Campaigns 5, 16, 18.}
+\caption{Imaging of S1063 in $60'' \times 60''$ postage stamps. \emph{left-to-right:} Pan-STARRS $g$-band co-added image contemporaneous with C16; 2MASS $J-$band; K2 Campaigns 5, 16, 18 from Full Frame Images.  S1063 is sufficiently separated from nearby sources in the coarse \emph{Kepler} imaging.}
 \label{fig:imaging}
 \end{figure*}
 
 \subsection{K2 superstamp lightcurves}
 The \emph{Kepler} spacecraft targeted S0163 (EPIC 211414597) during the \emph{K2} mission \citep{howell14} in Campaigns 5, 16, 18 as part of the M67 superstamps.  The instrumental point spread function (PSF) of S1063 fell entirely within the oversized K2 target pixel files in Campaign 5 (K2 Custom Aperture ID 200008674) and Campaign 18 (K2 Custom Aperture ID 200233338).  Aperture photometry was conducted with interactively-assigned custom apertures using the \texttt{lightkurve .interact()} feature \citep{geert_barentsen_2019_2565212}. The apertures were chosen to minimize flux-loss out of the aperture due to spacecraft-induced image motion, while avoiding low-$S/N$ pixels and the wings of adjacent PSFs.  The Campaign 16 source PSF overlapped the edge of Custom Aperture ID 200200534; a mosaic of adjacent superstamps was assembled before conducting aperture photometry.
 We detrended motion-induced image artifacts with the Self Flat Field algorithm \citep{vanderburg14} implemented in \texttt{lightkurve}.  Postage stamp images are shown in Figure \ref{fig:imaging}.
+
+\subsection{Inter-campaign relative photometry with K2 Full Frame Images}
+
+Stellar activity cycles on S1063 can secularly change the stellar brightness on timescales comparable to the separation of the three campaigns of \emph{K2} observations.  The comparison of flux levels among repeated \emph{K2} campaigns requires accounting for detector responsivity degradation on these same timescales.  The absolute sensitivity of the \emph{Kepler} detector pixels decay at $XX \%\;yr^{-1}$ due to sudden pixel sensitivity dropouts and other environmental lifetime factors (CITE Caldwell,Montet).  We calibrated the system-integrated throughput for \emph{Kepler} detector channels possessing the M67 field in campaigns 5, 16, and 18.  We measured aperture photometry for about two thousand isolated reference stars using the Full Frame Images (FFIs), keeping only reference stars that had repeated observations in all three campaigns.  Campaign 16 reference stars had a median flux of $93.9\pm4.2\%$ relative to campaign 5; campaign 18 showed $98.2\pm2.8\%$ relative to campaign 5.  These flux ratios dictate the vertical registration of the \emph{K2} lightcurves in Figure XX.
 
 \subsection{Ground-based photometric monitoring}
 We retrieved All-Sky Automated Survey for Supernovae \citep[ASAS-SN][]{shappee14} lightcurves from the Sky Portal \citep{2017PASP..129j4502K}.  The lightcurves contained 758 epochs of $V-$ band photometry spanning 2013-2018 (source ASASSN-V J085113.44+115139.7) and 823 epochs of $g-$band photometry spanning mid-2017$-$2018.  The $\sim8''$ ASAS-SN pixels may cause some PSF blending of the nearby-albeit-fainter source seen at the bottom of Figure \ref{fig:imaging}.  The pixel images were not available to evaluate the extent of blending.
@@ -132,7 +133,9 @@ We retrieved All-Sky Automated Survey for Supernovae \citep[ASAS-SN][]{shappee14
   \item Period and amplitude of lightcurve, with multi-term Lomb-Scargle + Fourier reconstruction
 \end{itemize}
 \item Phase folded archival V-band photometry (ASASSN+)
+
 \subsection{IGRINS two-temperature spectral inference w/ Starfish}
+
 
 We performed two-temperature probabilistic spectral decomposition on the IGRINS $H-$band spectrum.  We applied the spectral inference framework \texttt{Starfish} \citep{czekala15}, recently extended to support composite spectra comprised of mixtures of two distinct photospheric components \citep{gullysantiago17}.  Here, the two temperature components are labeled as $T_{\mathrm{spot}}$ and $T_{\mathrm{amb}}$ for the starspot and ambient photospheric emission respectively, with a filling factor $f$ defined as the ratio of collective projected surface area of the spot groups to the projected area of the star.
 

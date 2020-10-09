@@ -447,4 +447,4 @@ if args.animate:
     # the video can be embedded in html5.  You may need to adjust this for
     # your system: for more information, see
     # http://matplotlib.sourceforge.net/api/animation_api.html
-    anim.save('BD_IG_spec_anim.mp4', fps=10, dpi=300)
+    anim.save('subsub_spec_anim.mp4', fps=10, dpi=300)

@@ -12,7 +12,6 @@ dependencies:
   - beautifulsoup4
   - requests
   - anaconda
-  #- lightkurve=1.0b20=py_0 # conda-forge version
   - tqdm
   - pandas
   - oktopus # from conda-forge channel
@@ -20,6 +19,7 @@ dependencies:
   - jupyter
   - anaconda
   - celerite
+  - fitsio
   - ipython
   - seaborn
   - h5py
@@ -28,6 +28,11 @@ dependencies:
   - scikit-image
   - pip
   - reproject # conda-forge
+  ## We need SEP, but it is flakey with conda, so manually install:
+  #   https://sep.readthedocs.io/en/v1.0.x/
+  #   pip install --no-deps sep
+  #
+  #
   ## Also installed a custom Starfish:
   # obsidian at dust in ~/GitHub/Starfish on mix_model_omega2 [!]
   # $ python setup.py develop
