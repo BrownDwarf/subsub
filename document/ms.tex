@@ -20,9 +20,7 @@
 
 \providecommand{\eprint}[1]{\href{http://arxiv.org/abs/#1}{#1}}
 \providecommand{\adsurl}[1]{\href{#1}{ADS}}
-\newcommand{\name}{LkCa 4 }
 \newcommand{\project}[1]{\textsl{#1}}
-%\def\vsini{$v\sin{i_*}$}
 
 \slugcomment{In preparation}
 
@@ -52,48 +50,23 @@ We measure the starspots on a sub-subgiant.
 \maketitle
 
 \section{Introduction}\label{sec:intro}
-Recent studies illuminate the important role stellar magnetic activity plays in stellar structure. This impact of stellar activity and magnetic fields is seen throughout the Herzsprung-Russell Diagram. For example, by biasing isochronal ages of young clusters \citep{somers15}, inflating radii of active M-dwarfs (Torres2010, Morales2010, Jackson2019), causing redder multiple turnoffs in stellar clusters [Bastian2009, Sun2019], and altering the pulsation modes of red giants [Gaulme2020]. As our ability to probe the detailed physics of stellar evolution continues to improve we must grapple with the complexities of stellar structure diverging from simpler theoretical expectations due to magnetic activity, which requires careful observational studies of magnetically active systems to test magnetic stellar models.
+Recent studies illuminate the important role stellar magnetic activity plays in stellar structure. This impact of stellar activity and magnetic fields is seen throughout the Hertzsprung-Russell (HR) Diagram. For example, by biasing isochronal ages of young clusters \citep{somers15}, inflating radii of active M-dwarfs \citep{2010AJ....140.1158T,2010ApJ...718..502M,2019MNRAS.483.1125J}, causing redder multiple turnoffs in stellar clusters \citep{2009MNRAS.398L..11B,2019ApJ...876..113S}, and altering the pulsation modes of red giants \citep{2020A&A...639A..63G}. As our ability to probe the detailed physics of stellar evolution continues to improve we must grapple with the complexities of stellar structure diverging from simpler theoretical expectations due to magnetic activity, which requires careful observational studies of magnetically active systems to test magnetic stellar models.
 
-One example of the impact of magnetic activity is seen in sub-subgiant (SSG) stars, defined to be stars that lie below the subgiant branch on a cluster optical color-magnitude diagram (CMD), but are too red to be main sequence stars. Sub-subgiant stars are stars that lie below the subgiant branch on a cluster optical color-magnitude diagram (CMD), but are too red to be main sequence stars. These stars are commonly found in evolved open clusters and globular clusters, with 65 sub-subgiants currently identified across 17 different clusters \citep{geller17}. The majority of sub-subgiant stars are single-lined spectroscopic binaries with short orbital periods of a few days with moderate X-ray luminosities of $10^{30}$ to $10^{31}$ erg s$^{-1}$ \citep[and references therein]{geller17}.
+One example of the impact of magnetic activity is seen in sub-subgiant (SSG) stars, defined to be stars that lie below the subgiant branch on a cluster optical color-magnitude diagram (CMD), but are too red to be main sequence stars. These stars are commonly found in evolved open clusters and globular clusters, with 65 sub-subgiants currently identified across 17 different clusters \citep{geller17}. The majority of sub-subgiant stars are single-lined spectroscopic binaries with short orbital periods of a few days with moderate X-ray luminosities of $10^{30}$ to $10^{31}$ erg s$^{-1}$ \citep[and references therein]{geller17}.
 
-The presence of sub-subgiants cannot be explained with typical single-star stellar evolutionary pathways. Three possible formation scenarios for sub-subgiants were put forth by \citet{leiner17}: mass transfer in a binary system, stripping of a subgiant star envelope through a dynamical encounter, and reduced luminosity as a result of inhibited convection due to the presence of strong magnetic fields. \citet{leiner17} conclude that strong magnetic fields due to binary interactions would produce the largest number of sub-subgiants.
+The existence of sub-subgiants cannot be explained with typical single-star stellar evolutionary pathways. Three possible formation scenarios for sub-subgiants were put forth by \citet{leiner17}: mass transfer in a binary system, stripping of a subgiant star envelope through a dynamical encounter, and reduced luminosity as a result of inhibited convection and large starspot covering fractions due to the presence of strong magnetic fields. \citet{leiner17} conclude that the majority of sub-subgiants are likely the result of strong magnetic fields. This is supported by the presence of H-alpha and X-ray emission and optical variability seen across the known sub-subgiant population \citep{geller17}, all observational signatures of magnetic activity and the presence of starspots.
 
-In this paper we focus on a single sub-subgiant system, S1063 in the open cluster M67. This system is a prototypical sub-subgiant star, with an single-lined spectroscopic orbital period of 18.4 days \citep{geller17}, an X-ray luminosity of $1.3\times10^{31}$ erg s$^{-1}$ \citep{vandenberg99}, and a variable light curve in \textit{K2} (REF LIGHT CURVE SECTION?).
+The portion of the stellar surface covered with starspots is an important observational proxy for magnetic activity. Monochromatic light curves are often used to identify spotted stars \citep{2014ApJS..211...24M} but can only provide a limit on the differential spot coverage: a vast null space of longitudinally symmetric starspot geometries evade detection in monochromatic lightcurves alone \citep{2019AJ....157...64L}. Measuring the overall spot coverage typically requires Doppler imaging or interferometry studies restricted to only the brightest and most nearby sources \citep{roettenbacher16}, or relying on inferred covering fractions from TiO band observations \citep{oneal96,fang2016,2019AJ....158..101M}. Testing the next era of stellar activity models requires new analysis methodologies to measure spot-covering fractions of a larger number of targets, including sub-subgiants.
 
-\subsection{Starspots as confounding factors}
-Mass, age, and metallicity uniquely map a main sequence star to its HR diagram position.  A fourth factor---rotation---confounds this mapping in as-yet-unknown ways.  Rotation might enhance spread in HR diagram positions (cite XX Davenport, Douglas?), with the most conspicuous spreads in the pre-main sequence regime (cite XX Covey, Stauffer).  Spreads in the HR diagram offer clues to the consequences of rotation.  Increased rotation heightens the magnetic dynamo strength and concommitant surface magnetic field.  These magnetic fields suppress convective efficiency, meaning the star must increase in size at a lower effective temperature to allow the same amount of internal energy to escape (cite XX Feiden): rotating stars become bigger and cooler than their non-rotating counterparts (cite XX Somers).  The interplay of rotation, dynamo, and surface fields remain an active area of research, with bright prospects for a unified theory involving the degree of magnetic complexity parameter (cite XX Garraffo).
+Starspots emit a spectrum of their own at a lower temperature and with distinct absorption features compared to the ambient photosphere. The observed spectrum is a composite of the spot and photosphere spectra and can therefore be deconvolved. This deconvolution constrains the spot-covering fraction as well as the spot and photosphere temperatures. This is possible by performing a two-temperature probabilistic spectral decomposition using the spectral inference framework \texttt{Starfish} \citep{czekala15}, recently extended to support composite spectra \citep{gullysantiago17}. The resulting spot characterization can be used to anchor light curve information, providing insight into the overall stellar activity level and constraining the long-term spot coverage \citep{neff95}. This strategy only requires high-resolution echelle spectroscopy and photometric monitoring, dramatically increasing the number of sources for which we can observationally constrain spot-covering fractions.
 
-Surface magnetic fields offer two key observational manifestations.  The Zeeman Effect splits spectral line levels in magnetic-sensitive atomic transitions (cite XX Johns-Krull).  Starspots induce stellar surface inhomogeneities that can be seen in the modulation of
+In this paper we focus on a single sub-subgiant system, S1063 in the open cluster M67. This system is a prototypical sub-subgiant star, with an single-lined spectroscopic orbital period of 18.4 days \citep{geller17}, an X-ray luminosity of $1.3\times10^{31}$ erg s$^{-1}$ \citep{vandenberg99}, and a variable light curve in \textit{K2} and ASAS-SN (Section \ref{K2lightcurve}).
 
-The story in the post-main sequence is less clear.  Angular momentum transport governs rotation  as stars evolve over orders of magnitude in size.
-
-
-%Fill in more theory here
-\citet{somers15} emphasized the roll of starspots in inferring stellar ages.
-
-\begin{itemize}
-\item What is a sub-subgiant?
-  \begin{itemize}
-  \item What causes sub sub giant stars (Leiner et al. 2017)
-  \end{itemize}
-\item M67 S1063
-\begin{itemize}
-  \item Prototypical subsub (Geller et al. 2017)
-  \item Binary orbit, SB1
-\end{itemize}
-\item Starspots as confounding factors
-\begin{itemize}
-  \item Inhibit convective efficiency (redder and bigger)
-  \item Also confound observations: assign incorrect Teff
-  \item This paper aims to measure the starspot coverage and temp
-\end{itemize}
-\item Layout of this paper
-\end{itemize}
 
 \section{Observation and data reduction}
 \subsection{IGRINS observations}
 A high resolution spectrum of S1063 was acquired with the $R=45,000$ Immersion Grating Infrared Spectrograph \citep[IGRINS;][]{park14} at UT 2015-04-26 $03^h29^m$ at the $2.7\;$m Harlan J. Smith Telescope at McDonald Observatory.  Eight 600-second individual exposures were acquired in an ABBA nod pattern at an airmass of 1.2.  The sky emission lines and telluric lines were removed with the IGRINS Pipeline Package  \citep[PLP;][]{jaejoonlee16} and a reference A0V star acquired nearby in time and airmass.
-The $H-$band spectra exhibited signal-to-noise ratio $S/N\sim30-80$ per pixel (\textbf{verify XX}).
+The $H-$band spectra exhibited signal-to-noise ratio $S/N\sim50$ per pixel.
 The $K-$band spectra possessed low $S/N$ and were excluded from further analysis.
 
 \begin{figure*}[hbt!]
@@ -110,42 +83,55 @@ The $K-$band spectra possessed low $S/N$ and were excluded from further analysis
 \end{figure*}
 
 \subsection{K2 superstamp lightcurves}
-The \emph{Kepler} spacecraft targeted S0163 (EPIC 211414597) during the \emph{K2} mission \citep{howell14} in Campaigns 5, 16, 18 as part of the M67 superstamps.  The instrumental point spread function (PSF) of S1063 fell entirely within the oversized K2 target pixel files in Campaign 5 (K2 Custom Aperture ID 200008674) and Campaign 18 (K2 Custom Aperture ID 200233338).  Aperture photometry was conducted with interactively-assigned custom apertures using the \texttt{lightkurve .interact()} feature \citep{geert_barentsen_2019_2565212}. The apertures were chosen to minimize flux-loss out of the aperture due to spacecraft-induced image motion, while avoiding low-$S/N$ pixels and the wings of adjacent PSFs.  The Campaign 16 source PSF overlapped the edge of Custom Aperture ID 200200534; a mosaic of adjacent superstamps was assembled before conducting aperture photometry.
+The \emph{Kepler} spacecraft targeted S0163 (EPIC 211414597) during the \emph{K2} mission \citep{howell14} in Campaigns 5, 16, 18 as part of the M67 superstamps.  The instrumental point spread function (PSF) of S1063 fell entirely within the oversized K2 target pixel files in Campaign 5 (K2 Custom Aperture ID 200008674, channel 13) and Campaign 18 (K2 Custom Aperture ID 200233338).  Aperture photometry was conducted with interactively-assigned custom apertures using the \texttt{lightkurve.interact()} feature \citep{geert_barentsen_2019_2565212}. The apertures were chosen to minimize flux-loss out of the aperture due to spacecraft-induced image motion, while avoiding low-$S/N$ pixels and the wings of adjacent PSFs.  The Campaign 16 source PSF overlapped the edge of Custom Aperture ID 200200534; a mosaic of adjacent superstamps was assembled before conducting aperture photometry.
 We detrended motion-induced image artifacts with the Self Flat Field algorithm \citep{vanderburg14} implemented in \texttt{lightkurve}.  Postage stamp images are shown in Figure \ref{fig:imaging}.
 
-\subsection{Inter-campaign relative photometry with K2 Full Frame Images}
+\subsection{Inter-campaign relative photometry with K2 Full Frame Images}\label{K2lightcurve}
 
-Stellar activity cycles on S1063 can secularly change the stellar brightness on timescales comparable to the separation of the three campaigns of \emph{K2} observations.  The comparison of flux levels among repeated \emph{K2} campaigns requires accounting for detector responsivity degradation on these same timescales.  The absolute sensitivity of the \emph{Kepler} detector pixels decay at $XX \%\;yr^{-1}$ due to sudden pixel sensitivity dropouts and other environmental lifetime factors (CITE Caldwell,Montet).  We calibrated the system-integrated throughput for \emph{Kepler} detector channels possessing the M67 field in campaigns 5, 16, and 18.  We measured aperture photometry for about two thousand isolated reference stars using the Full Frame Images (FFIs), keeping only reference stars that had repeated observations in all three campaigns.  Campaign 16 reference stars had a median flux of $93.9\pm4.2\%$ relative to campaign 5; campaign 18 showed $98.2\pm2.8\%$ relative to campaign 5.  These flux ratios dictate the vertical registration of the \emph{K2} lightcurves in Figure XX.
+Stellar activity cycles on S1063 can secularly change the stellar brightness on timescales comparable to the separation of the three campaigns of \emph{K2} observations.  The comparison of flux levels among repeated \emph{K2} campaigns requires accounting for detector responsivity degradation on these same timescales.  The absolute sensitivity of the \emph{Kepler} detector pixels decay at $\sim1 \%\;\textrm{yr}^{-1}$ due to sudden pixel sensitivity dropouts and other environmental lifetime factors \citep{montet17}.
+
+To account for sensitivity changes, we calibrate the system-integrated throughput for \emph{Kepler} detector channels including the M67 field for Campaigns 5, 16, and 18. We measure aperture photometry for approximately 2000 isolated reference stars from the Full Frame Images, keeping only those stars that were observed in all three campaigns. Compared to Campaign 5, the reference stars have a median flux of $93.9\pm4.2\%$ in Campaign 16 and a median flux of $98.2\pm2.8\%$ in Campaign 18. Campaigns 5 and 18 were observed on the same detector channel while a different detector channel was used for Campaign 16, therefore these offsets are not a significant measure of detector degradation across campaigns.
+
+Given the full contemporaneous coverage between ground-based ASAS-SN data with Campaign 16, we set the overall vertical registration of the \emph{K2} lightcurves such that the ASAS-SN and Campaign 16 fluxes are consistent. As the uncertainty in the inter-campaign offsets is larger than the internal precision of the \emph{K2} photometry we adjust the Campaign 5 data within the offset uncertainty to match the approximately one week of contemporaneous ASAS-SN coverage.
+
+
+\begin{figure*}[hbt!]
+  \centering
+  \includegraphics[width=7.0in]{figures/2020_K2_ASASSN_lcurve_2panel.pdf}
+\caption{Four year lightcurve for S1063.  \emph{K2} Campaigns 5, 16, and 18 (densely-sampled red points) and ASAS-SN $V-$band (coarsely-sampled gray points) show $\sim5-17\%$ peak-to-valley photometric variations indicative of secularly evolving surface coverage of starspots.  The orange line shows a damped, driven harmonic oscillator \emph{celerit\`e} model \citep{2017AJ....154..220F} trained on the K2 and ASAS-SN data, and then applied to the noisy ASAS-SN points, with a standard-error uncertainty band in shaded orange.  The vertical blue bar in mid-2015 shows the epoch of IGRINS data acquisition, which shows an approximately $8\%$ flux deficit compared to global upper envelope of flux in early 2017.}
+\label{fig:lightcurve}
+\end{figure*}
 
 \subsection{Ground-based photometric monitoring}
-We retrieved All-Sky Automated Survey for Supernovae \citep[ASAS-SN][]{shappee14} lightcurves from the Sky Portal \citep{2017PASP..129j4502K}.  The lightcurves contained 758 epochs of $V-$ band photometry spanning 2013-2018 (source ASASSN-V J085113.44+115139.7) and 823 epochs of $g-$band photometry spanning mid-2017$-$2018.  The $\sim8''$ ASAS-SN pixels may cause some PSF blending of the nearby-albeit-fainter source seen at the bottom of Figure \ref{fig:imaging}.  The pixel images were not available to evaluate the extent of blending.
-%% Option: Pan-STARRS
+We retrieved All-Sky Automated Survey for Supernovae \citep[ASAS-SN;][]{shappee14} lightcurves from the Sky Portal \citep{2017PASP..129j4502K}.  The lightcurves contained 758 epochs of $V-$ band photometry spanning 2013-2018 (source ASASSN-V J085113.44+115139.7) and 823 epochs of $g-$band photometry spanning mid-2017$-$2018.  The $\sim8''$ ASAS-SN pixels may cause some PSF blending of the nearby-albeit-fainter source seen at the bottom of Figure \ref{fig:imaging}.  The pixel images were not available to evaluate the extent of blending.
+
 
 \subsection{Gaia data}
 \emph{Gaia} DR2 astrometry \citep{2016A&A...595A...1G, 2018A&A...616A...1G} indicates a parallax ($1.17\pm0.025 \;$mas) and proper motion for S1063 (\emph{Gaia} DR2 604921030968952832) consistent with other M67 members, and approaching 100\% membership probability \citep{2018ApJ...869....9G}.
 
 \section{Analysis}
-\begin{itemize}
-\item Summary and assumptions of our methods
-\item K2 data
-\begin{itemize}
-  \item Zero points with FFIs or super stamps
-  \item Interpreting lightcurves
-  \item Period and amplitude of lightcurve, with multi-term Lomb-Scargle + Fourier reconstruction
-\end{itemize}
-\item Phase folded archival V-band photometry (ASASSN+)
 
-\subsection{IGRINS two-temperature spectral inference w/ Starfish}
+TBD
 
+1. Summary and assumptions of our methods
+2.  K2 data
+3.  Zero points with FFIs or super stamps
+4.   Interpreting lightcurves
+5.  Period and amplitude of lightcurve, with multi-term Lomb-Scargle + Fourier reconstruction
+6.  Phase folded archival V-band photometry (ASASSN+)
+
+
+\subsection{IGRINS two-temperature spectral decomposition}
 
 We performed two-temperature probabilistic spectral decomposition on the IGRINS $H-$band spectrum.  We applied the spectral inference framework \texttt{Starfish} \citep{czekala15}, recently extended to support composite spectra comprised of mixtures of two distinct photospheric components \citep{gullysantiago17}.  Here, the two temperature components are labeled as $T_{\mathrm{spot}}$ and $T_{\mathrm{amb}}$ for the starspot and ambient photospheric emission respectively, with a filling factor $f$ defined as the ratio of collective projected surface area of the spot groups to the projected area of the star.
 
-We employed the \texttt{PHOENIX} precomputed synthetic model grid with grid ranges of $3000 < T_{\mathrm{eff}} \; (K) < 5300 $, $3 < \log{g \;(cm/s)}  < 4 $, and $ -0.5 <  [\mathrm{Fe}/\mathrm{H}] <0.5$.  We trained the spectral emulator \citep{czekala15} on this grid range, while preserving the absolute model mean fluxes to enable accurate flux comparison between two photospheres of disparate characteristic temperatures.  This new approach offers improved accuracy over the scalar flux interpolated approach introduced in Appendix XX of \citet{gullysantiago17}, especially for such a large dynamic range in effective temperature.  The spectral emulator approach propagates the uncertainty attributable to the coarsely sampled \texttt{PHOENIX} models.
+We employed the \texttt{PHOENIX} precomputed synthetic model grid with grid ranges of $3000 < T_{\mathrm{eff}} \; (K) < 5300 $, $3 < \log{g \;(cm/s)}  < 4 $, and $ -0.5 <  [\mathrm{Fe}/\mathrm{H}] <0.5$.  We trained the spectral emulator \citep{czekala15} on this grid range, while preserving the absolute model mean fluxes to enable accurate flux comparison between two photospheres of disparate characteristic temperatures.  This new approach offers improved accuracy over the scalar flux interpolated approach introduced in Appendix A of \citet{gullysantiago17}, especially for such a large dynamic range in effective temperature.  The spectral emulator approach propagates the uncertainty attributable to the coarsely sampled \texttt{PHOENIX} models.
 
 The pre-defined grid ranges place uniform priors over their domain.  Additionally, a threshold of 4500 K separated the allowed domains for the spot and ambient temperatures, yielding uniform priors $3000 < T_{\mathrm{spot}} \; (K) < 4500 $ and $4500 < T_{\mathrm{amb}} \; (K) < 5300$.
 
 \subsubsection{MCMC convergence and posterior predictive checks}
-Each IGRINS spectral order was fit independently, yielding over 20 individual sets of MCMC posteriors.  We employed \texttt{emcee} \citep{foreman13} with 5000 samples and 40 walkers, spot-checking the MCMC chains for signatures of steady-state posterior probability distributions suggestive of convergence.  Some orders did not pass our convergence criteria, usually due to poor initialization of nuissance parameters or overfitting.  These specrtral orders were removed from future analysis, yielding a total of nine spectral orders, shown in Figure \ref{fig:IGRINS_spectra3x3}.
+
+Each IGRINS spectral order was fit independently, yielding over 20 individual sets of MCMC posteriors.  We employed \texttt{emcee} \citep{foreman13} with 5000 samples and 40 walkers, spot-checking the MCMC chains for signatures of steady-state posterior probability distributions suggestive of convergence.  Some orders did not pass our convergence criteria, usually due to poor initialization of nuisance parameters or overfitting.  These spectral orders were removed from future analysis, yielding a total of nine spectral orders, shown in Figure \ref{fig:IGRINS_spectra3x3}.
 
 \subsubsection{FIGURE: IGRINS Spectra}
 \begin{figure*}
@@ -162,21 +148,22 @@ We additionally spot-checked the MCMC posteriors with posterior predictive check
 \begin{itemize}
   \item Limits on companion types
 \end{itemize}
-\end{itemize}
+
 
 \section{Results}
 
 Using the \texttt{Starfish} spectral inference results we investigate the relationship between spot temperature and filling factor. In Figure~\ref{fig:tspot_fillingfactor3x3} we show 2-dimensional distributions of filling factor and spot temperature of the last 200 samples for the nine orders with accepted fits. Similar trends between spot temperature and filling factor appear across most of the orders. Across all nine orders, the median filling factor value is 32\% with a standard deviation of 7\%, with a corresponding spot temperature of $4000 \pm 200$ K. The ambient photosphere temperature associated with this spot signature is $5200\pm25$ K. This is similar to the optical spectroscopic temperature of 5000 K determined by \citet{mathieu03}, which is expected as the optical spectrum will have less significant spot signatures than the IGRINS spectrum in the NIR.
 
-From the 4-year light curve of S1063 (REF LIGHT CURVE FIGURE) we determine that the IGRINS spectrum was observed at a local maximum in the stellar variability, but this flux was approximately 7\% below the global maximum over the four year period covered by ASAS-SN and \textit{K2}. From a first-order interpretation of light curve amplitudes, minimum light corresponds to the largest star spot coverage while maximum light corresponds to the least star spot coverage, although these assumptions are complicated by the possibility of spot evolution \citep{basri18}. Assuming non-emitting spots, the stellar surface must be at least 7\% covered at the time of the IGRINS observation to account for the overall suppression in the maximum flux. If we adopt an ambient photosphere temperature of 5200 K and a spot temperature of 4000 K, the spot coverage would have to be 10\% to account for the flux suppression. At the time of observation, these spectral inference results show that the spot coverage was actually 32\%. This suggests that at the 4-year light curve maximum of S1063, the spot coverage was still around 20\% and definitely not an unspotted star. As seen in Figure LIGHT CURVE, the absolute light curve minimum (occuring at HJD **SOME DATE HERE**) was approximately 13\% lower than the flux at the time of observation. We conclude that the maximum spot filling factor at that time was closer to 50\%.
+From the 4-year light curve of S1063 (Figure~\ref{fig:lightcurve} we determine that the IGRINS spectrum was observed at a local maximum in the stellar variability, but this flux was only 91.2\% of the global maximum over the four year period covered by ASAS-SN and \textit{K2}. From a first-order interpretation of light curve amplitudes, minimum light corresponds to the largest star spot coverage while maximum light corresponds to the least star spot coverage, although these assumptions are complicated by the possibility of spot evolution \citep{basri18}. Adopting an ambient photosphere temperature of 5200 K and a spot temperature of 4000 K, the spot coverage of S1063 must be at least 13\% to account for the flux at the time of observation, and yet these spectral inference results indicate the spot coverage at the time of the IGRINS observation was actually 32\%. This suggests that at maximum light over this 4-year period the spot coverage of S1063 was  approximately 20\% --- definitely not an unspotted star. Over the 4-years shown in Figure~\ref{fig:lightcurve}, the average flux variation is approximately 5\%, corresponding to an average spot covering fraction variation of $\pm$8\%, with a global flux minimum 10\% lower than the flux at the time of observation, requiring a spot filling factor closer to 45\%.
 
-The time average spot coverage fraction is AMOUNT over the four years, and with that we can calculate the time averaged effective temperature...
+SQUISHY TEFF TEXT
+The standard understanding of $T_{\textrm{eff}}$ is difficult to apply to spotted stars, especially stars with variation in the spot covering fraction. One interpretation is to calculate the surface-averaged $T_{\textrm{eff}}$:
 
-(UPDATE THIS WITH TIME AVERAGED SPOT NUMBERS) The presence of spots impacts the effective temperature of S1063. Taking into account both temperature components, we calculate the effective temperature using
 \begin{equation}
 T_{\textrm{eff}}^4 = f_{\textrm{spot}} T_{\textrm{spot}}^4 + (1 -f_{\textrm{spot}}) T_{\textrm{ambient}}^4 .
 \end{equation}
-This results in an updated effective temperature for S1063 of $4900\pm125$ K.
+
+This, however, results in different $T_{\textrm{eff}}$ values for S1063 based on the instantaneous spot covering fraction. At the time of the IGRINS observation, the $T_{\textrm{eff}}$ would be $4900\pm100$ K, whereas the $T_{\textrm{eff}}$ corresponding to the 4-year light curve minimum would be approximately 4700 K.
 
 
 
@@ -215,6 +202,14 @@ This results in an updated effective temperature for S1063 of $4900\pm125$ K.
 
 \section{Discussion}
 
+%%% TODO: retool below discussion for the HRD discussion
+%\subsection{Starspots as confounding factors}
+%Mass, age, and metallicity uniquely map a main sequence star to its HR diagram position.  A fourth factor---rotation---confounds this mapping in as-yet-unknown ways.  Rotation might enhance spread in HR diagram positions (cite XX Davenport, Douglas?), with the most conspicuous spreads in the pre-main sequence regime (cite XX Covey, Stauffer).  Spreads in the HR diagram offer clues to the consequences of rotation.  Increased rotation heightens the magnetic dynamo strength and concomitant surface magnetic field.  These magnetic fields suppress convective efficiency, meaning the star must increase in size at a lower effective temperature to allow the same amount of internal energy to escape (cite XX Feiden): rotating stars become bigger and cooler than their non-rotating counterparts (cite XX Somers).  The interplay of rotation, dynamo, and surface fields remain an active area of research, with bright prospects for a unified theory involving the degree of magnetic complexity parameter (cite XX Garraffo).
+
+%Surface magnetic fields offer two key observational manifestations.  The Zeeman Effect splits spectral line levels in magnetic-sensitive atomic transitions (cite XX Johns-Krull).  Starspots induce stellar surface inhomogeneities that can be seen in the modulation of
+
+%The story in the post-main sequence is less clear.  Angular momentum transport governs rotation  as stars evolve over orders of magnitude in size.
+
 
 The spot coverage fraction measured here is consistent with the range of spot coverage seen on RS CVn of 30--40\% from measuring TiO band strength \citep{oneal96, oneal98, oneal04} and Doppler imaging \citep{hackman12}. The similar spot coverage fraction on S1063 is further evidence that this sub-subgiant and likely other sub-subgiants have high magnetic activity.
 
@@ -239,26 +234,21 @@ Reiteration here.
 \pagebreak
 
 
-\appendix
-
-\section{Are starspots confusing?}
-\label{methods-details}
-
-Short answer: no!
+%\appendix
+%\section{Appendix heading}
+%\label{methods-details}
+%Placeholder text
 
 \acknowledgements
 
 %ADS
-We thank ADS!
-
+This research has made use of NASA’s Astrophysics Data System.
 %IGRINS
-This work used the Immersion Grating Infrared Spectrometer(IGRINS) that was developed under a collaboration between the University of Texas at Austin and the Korea Astronomy and Space Science Institute (KASI) with the financial support of the US National Science Foundation under grant AST-1229522, of the University of Texas at Austin, and of the Korean GMT Project of KASI.
-
+This work used the Immersion Grating Infrared Spectrometer (IGRINS) that was developed under a collaboration between the University of Texas at Austin and the Korea Astronomy and Space Science Institute (KASI) with the financial support of the US National Science Foundation under grant AST-1229522, of the University of Texas at Austin, and of the Korean GMT Project of KASI.
 %Kepler
 This paper includes data collected by the Kepler mission. Funding for the Kepler mission is provided by the NASA Science Mission directorate.
-
 % MAST
-Some/all of the data presented in this paper were obtained from the Mikulski Archive for Space Telescopes (MAST). STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.
+Some of the data presented in this paper were obtained from the Mikulski Archive for Space Telescopes (MAST). STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.
 
 %gaia
 This work has made use of data from the European Space Agency (ESA) mission
@@ -269,7 +259,7 @@ has been provided by national institutions, in particular the institutions
 participating in the {\it Gaia} Multilateral Agreement.
 
 
-{\it Facilities:} \facility{Smith (IGRINS)}, \facility{AAVSO}, \facility{INTEGRAL (OMC)}, \facility{ASAS}, \facility{Gaia}
+{\it Facilities:} \facility{Smith (IGRINS)}, \facility{ASAS}, \facility{Gaia}
 
 {\it Software: }
  \project{pandas} \citep{mckinney10},
