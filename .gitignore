@@ -20,3 +20,13 @@ results/*.pdf
 
 # Ignore custom direnv.net file, machine-specific
 .envrc
+
+# Ignore the final paper pdf for now, it is programmatically generated
+document/final
+
+# Ignore literature data that is retrieved through permalinks at journals
+data/lit
+
+# Ignore the imaging data which has instructions for its retrieval in the readme and can be large, especially for PanSTARRS
+data/imaging/2MASS
+data/imaging/PanSTARRS
