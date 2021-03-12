@@ -2,3 +2,21 @@
 *grid.out
 *.npy
 *.fits
+
+# Ignore log files and Mac icon config
+*log.log
+*.DS_Store
+
+# For now ignore the user priors
+# we may want to commit these eventually, thought they should be
+# generated programmatically anyways
+*user_prior.py
+
+# Ignore the figures we use for sharing exploratory results
+# These figures can be regenerated in the Jupyter notebook
+# The important figures go in the paper and are committed in git
+results/*.png
+results/*.pdf
+
+# Ignore custom direnv.net file, machine-specific
+.envrc
