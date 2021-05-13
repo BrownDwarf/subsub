@@ -26,6 +26,7 @@ dependencies:
   - photutils # from conda-forge?
   - scikit-learn
   - scikit-image
+  - nbdime
   - pip
   - reproject # conda-forge
   ## We need SEP, but it is flakey with conda, so manually install:
