@@ -20,7 +20,7 @@ all: ms.pdf
 	# Change the commit SHA below to whatever diff you want
 	git show 18543d3:document/ms.tex > ms_old.tex
 	# Run Latex Diff on the new versus old
-	latexdiff ms.tex ms_old.tex > ms_diff.tex
+	latexdiff ms_old.tex ms.tex > ms_diff.tex
 	tectonic ms_diff.tex
 	mv ms_diff.pdf final/
 	rm ms_old.tex
