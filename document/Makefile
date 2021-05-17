@@ -18,7 +18,7 @@ all: ms.pdf
 	rm -rf *.dvi
 
 	# Change the commit SHA below to whatever diff you want
-	git show 18543d3:document/ms.tex > ms_old.tex
+	git show 03c7fe8:document/ms.tex > ms_old.tex
 	# Run Latex Diff on the new versus old
 	latexdiff ms_old.tex ms.tex > ms_diff.tex
 	tectonic ms_diff.tex
