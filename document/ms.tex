@@ -14,7 +14,7 @@
 \shorttitle{Starspot Coverage on Sub-subgiant S1063}
 \shortauthors{Gosnell et al.}
 
-\title{Constraining the Starspot Filling Factor of Active M67 Sub-Subgiant S1063}
+\title{Constraining the Starspot Filling Factor of Magnetically Active M67 Sub-Subgiant S1063}
 
 \author{Natalie M. Gosnell}
 \affiliation{Colorado College, Department of Physics, 14 E. Cache La Poudre St, Colorado Springs, CO 80903}
@@ -132,7 +132,7 @@ Finally, we transfer the pre-trained model parameters to a GP based on the ASAS-
 
 \subsection{IGRINS two-temperature spectral decomposition}
 
-The IGRINS observation epoch can be seen as the vertical blue line in Figure~\ref{fig:lightcurve}. The filling factor derived at this moment belies the filling factor derived at all other lightcurve time points.
+The IGRINS observation epoch can be seen as the vertical blue line in Figure~\ref{fig:lightcurve}. The filling factor derived at this moment will belie the filling factor projected forward and backward in time.
 
 We performed a two-temperature probabilistic spectral decomposition on the IGRINS $H$-band spectrum.  We applied the spectral inference framework \texttt{Starfish} \citep{czekala15}, recently extended to support composite spectra comprised of mixtures of two distinct photospheric components \citep{gullysantiago17}.  Here, the two temperature components are labeled as $T_{\mathrm{spot}}$ and $T_{\mathrm{amb}}$ for the starspot and ambient photospheric emission, respectively, with a filling factor $f$ defined as the ratio of disk-integrated projected surface area of the spot groups to the projected area of the star.
 
@@ -142,7 +142,7 @@ The pre-defined grid ranges place uniform priors over their domain.  Additionall
 
 \subsubsection{MCMC convergence and posterior predictive checks}
 
-Each IGRINS $H$-band spectral order was fit independently, yielding over 20 individual sets of MCMC posteriors.  We employed \texttt{emcee} \citep{foreman13} with 5000 samples and 40 walkers, spot-checking the MCMC chains for signatures of steady-state posterior probability distributions suggestive of convergence.  Some orders did not pass our convergence criteria, usually due to poor initialization of nuisance parameters or over-fitting.  Furthermore, the radial velocity $v_z$ and projected rotational broadening $v\sin{i}$ were spot-checked to verify both consistent values among spectral orders as well as posterior distributions indicative of information-rich spectral orders.  Some relatively feature-free spectral orders did not offer enough constraining power to derive meaningful results in the face of multiple sources of degeneracy.  Collectively, these discrepant or uninformative spectral orders were removed from future analysis, yielding a total of nine preserved spectral orders, shown in Figure \ref{fig:IGRINS_spectra3x3}. All spectral orders were consistent with a $v\sin{i}=10 \;\mathrm{km/s}$, with typical per-order $1-\sigma$ uncertainties of $0.2-1.0 \;\mathrm{km/s}$.  The per-order estimates for radial velocity were all consistent with $v_z=44\;\mathrm{km/s}$ at the measurement epoch, uncorrected for barycentric motion.
+Each IGRINS $H$-band spectral order was fit independently, yielding over 20 individual sets of MCMC posteriors.  We employed \texttt{emcee} \citep{foreman13} with 5000 samples and 40 walkers, spot-checking the MCMC chains for signatures of steady-state posterior probability distributions suggestive of convergence.  Some orders did not pass our convergence criteria, usually due to poor initialization of nuisance parameters or over-fitting.  Furthermore, the radial velocity $v_z$ and projected rotational broadening $v\sin{i}$ were spot-checked to verify consistent values among spectral orders as well as posterior distributions indicative of information-rich spectral orders.  Some relatively feature-free spectral orders did not offer enough constraining power to derive meaningful results in the face of multiple sources of degeneracy.  Collectively, these discrepant or uninformative spectral orders were removed from future analysis, yielding a total of nine preserved spectral orders, shown in Figure \ref{fig:IGRINS_spectra3x3}. All spectral orders were consistent with a $v\sin{i}=10 \;\mathrm{km/s}$, with typical per-order $1-\sigma$ uncertainties of $0.2-1.0 \;\mathrm{km/s}$.  The per-order estimates for radial velocity were all consistent with $v_z=44\;\mathrm{km/s}$ at the measurement epoch, uncorrected for barycentric motion.
 
 \begin{figure*}[ht]
  \centering
@@ -151,23 +151,15 @@ Each IGRINS $H$-band spectral order was fit independently, yielding over 20 indi
  \label{fig:IGRINS_spectra3x3}
 \end{figure*}
 
-%\subsubsection{Consistency of stellar characterization}
-%Vsini is similar to before and radial velocity is what we expect given orbital phasing (NEED TO DO THE PHASING).
-
-
-%TODO: Analysis of near-IR flux contribution from binary companion
-%TODO: Limits on companion types
-
-
 \section{Results}
 \label{sec:results}
 
 \subsection{Spot temperature and filling factor}
 \label{sec:starfishresults}
-Using the \texttt{Starfish} spectral inference results we investigate the joint constraints on spot temperature and filling factor, marginalized over all other uncertainties in stellar properties and fitting hyper-parameters (such as \texttt{Starfish}-derived Gaussian Process correlation length and amplitude and continuum fitting polynomials). In Figure~\ref{fig:tspot_fillingfactor3x3} we show 2-dimensional posterior distributions of filling factor and spot temperature of the last 1000 samples thinned by a factor of 10 from all 40 \texttt{emcee} walkers for the nine orders with accepted fits. The orders show broad agreement between spot temperature and filling factor. Across all nine orders, the median filling factor value is 32\% with a standard deviation of 7\%, with a corresponding spot temperature of $4000 \pm 200$ K. The ambient photosphere temperature associated with this spot signature varies from order-to-order and is broadly consistent with a range of temperatures between 5000 K and 5300 K, with a best guess value of 5200 K.  These values are broadly consistent with a spectroscopic temperature of 5000 K for S1063 determined by \citet{mathieu03} determined from visible-wavelength spectra.  Visible wavelength spectra principally perceive the ambient photosphere, due to the near-zero starspot contrast at those wavelengths.  Therefore the most reliable ambient photosphere estimate likely stems from the visible-based measurement, and not our near-IR-based estimate.
+Using the \texttt{Starfish} spectral inference results we investigate the joint constraints on spot temperature and filling factor, marginalized over all other uncertainties in stellar properties and fitting hyper-parameters (such as \texttt{Starfish}-derived Gaussian Process correlation length and amplitude and continuum fitting polynomials). In Figure~\ref{fig:tspot_fillingfactor3x3} we show 2-dimensional posterior distributions of filling factor and spot temperature of the last 1000 samples thinned by a factor of 10 from all 40 \texttt{emcee} walkers for the nine orders with accepted fits. The orders show broad agreement between spot temperature and filling factor. Across all nine orders, the median filling factor value is 32\% with a standard deviation of 7\%, with a corresponding spot temperature of $4000 \pm 200$ K. The ambient photosphere temperature associated with this spot signature varies from order-to-order and is in the range of 5000 $-$ 5300 K, with a median value of 5200 K.  These values are broadly consistent with a spectroscopic temperature of 5000 K for S1063 determined by \citet{mathieu03} determined from visible-wavelength spectra.  Visible wavelength spectra principally perceive the ambient photosphere, due to the near-zero starspot contrast at those wavelengths.  Therefore the most reliable ambient photosphere estimate likely stems from the visible-based measurement, and not our near-IR-based estimate.
 
 \subsubsection{Light curve interpretation}
-The ASAS-SN and \textit{K2} Campaign 5 data of S1063 (Figure~\ref{fig:lightcurve}) indicate that the IGRINS observation was coincidentally acquired near its modest local maximum at an overall flux level of 91.2\%. This is close to the overall 89.5\% mean flux level, where the 100\% flux level is equal to the global maximum over the four-year period covered by ASAS-SN and \textit{K2}. The lightcurve exhibits relatively modest variability at the time of the IGRINS observations with merely 3\% peak-to-valley variation compared to its global largest variation of almost 17\% as observed around 2017 January.
+The ASAS-SN and \textit{K2} Campaign 5 data of S1063 (Figure~\ref{fig:lightcurve}) indicate that the IGRINS observation was coincidentally acquired near its modest local maximum at an overall flux level of 91.2\%. This is close to the overall 89.5\% mean flux level, where the 100\% flux level is defined as the global maximum over the four-year period covered by ASAS-SN and \textit{K2}. The lightcurve exhibits relatively modest variability at the time of the IGRINS observations with merely 3\% peak-to-valley variation compared to its global largest variation of almost 17\% as observed around 2017 January.
 
 For a first-order interpretation of light curve amplitudes, we posit that the lightcurve is starspot-dominated as opposed to facula-dominated.  Under this assumption, minimum light corresponds to the largest blockage of ambient flux and therefore the largest starspot coverage on the instantaneous hemisphere projected towards the observer \cite{basri18}.  Maximum light corresponds to the moments with the least---\emph{but not necessarily zero}---starspot coverage.
 
